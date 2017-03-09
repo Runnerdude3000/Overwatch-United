@@ -11,6 +11,12 @@ import UIKit
 class ProfileScreenVC: UIViewController
 {
     
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileName: UILabel!
+    @IBOutlet weak var tankImage: UIImageView!
+    @IBOutlet weak var damageImage: UIImageView!
+    @IBOutlet weak var defenseImage: UIImageView!
+    @IBOutlet weak var healImage: UIImageView!
     
     
     
@@ -23,5 +29,10 @@ class ProfileScreenVC: UIViewController
     @IBAction func backButtonPressed(_ sender: UIButton)
     {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func rollsButtonPressed(_ sender: UIButton)
+    {
+        
     }
 }

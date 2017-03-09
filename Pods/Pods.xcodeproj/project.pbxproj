@@ -7,83 +7,159 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A41B0B36FDB6B762FB95F06220A3142 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		7F7B41D1D6C52D81E62C382A6CEA3B4B /* youtube-ios-player-helper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEDD2F689CF607F4114F7FE184DD249 /* youtube-ios-player-helper-dummy.m */; };
-		8282F1171682EF9BB4337B833160EDB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		A866B53A8F9A3E0C43CA4B95E1102F32 /* Pods-Overwatch United-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 217B03E987F26E88740C791369CE1BF3 /* Pods-Overwatch United-dummy.m */; };
-		C94472786B470A076ABCCAC833E6E49B /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 57412ECC2E6F0968B0C2F3F1F1EA9F04 /* YTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FBF0F451A51FC679249446BA0999C13A /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6950FC72124604AC0C0E82C68D12D3 /* YTPlayerView.m */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437D8B7C0975BF19CAFF3D8FE3FD620 /* Timeline.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8772A184F96E9A15C1B79B94344C3EA5 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B63C3FA54BE59093D19D0F0008C12 /* TaskDelegate.swift */; };
+		3DA4C8DB8A5F89A8B8BEDC6E14F3EC9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5803113674F7EB4AF801B9540980C405 /* Request.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082346FDECB2BC30A60AAF470A5D0AF /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45749213EAA9C55035C8DCF26A40145D /* ServerTrustPolicy.swift */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA442685BC17448ACE3985AE819D37D2 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896DCCFCF5F1BA33128B4F5A46BF4D8D /* Result.swift */; };
+		82882DC8E24AB50A0FEF8B6CC915065F /* Pods-Overwatch United-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43611DEE34983FEF04EDBE6B252DB21C /* Pods-Overwatch United-dummy.m */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7277B265763976A9AE875049F005F572 /* AFError.swift */; };
+		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B831198BED18AE95D70C50D1952BE7 /* NetworkReachabilityManager.swift */; };
+		A4076C18F3A254235A6E18B17B244907 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		A69653863A41A6C103851F411DD5A6F9 /* youtube-ios-player-helper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB560FC7890416B7E8A7288B3154DE6 /* youtube-ios-player-helper-dummy.m */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3C034575E90835C73B181CDC9470D1 /* Alamofire-dummy.m */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677A4010EB8DED738197A6B3A84CA6A4 /* SessionManager.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EA9FACC4448728404AE73475543732 /* MultipartFormData.swift */; };
+		B9B1F474AC9E669F3B1FB512BAFB24A5 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C194B368162671377A50024C0D1CE /* YTPlayerView.m */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973981C2309516FF9C31C46A72BAEC8 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529E59BE7ACBFF802B0110EDD0DA77E /* ParameterEncoding.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAA7D2535C68C6EF402F974D54DEC8 /* Response.swift */; };
+		DC78E19780B6BFE21A54A74604D74CA9 /* youtube-ios-player-helper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17C3F70ED0031B700B34CB442A735206 /* youtube-ios-player-helper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E21D420480FC6531525ED0AAD5CE8B6C /* Pods-Overwatch United-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF4C5A0641235B2BFA73D7DCDC9BD01 /* Pods-Overwatch United-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECBD9C05B8FD831776C90F0A0053CCD4 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 384B5BFDD7003A96A43DB3F48EA9944A /* Assets.bundle */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CB504F3982F44E29B9966033F08ED3 /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03267965F7DE6C4D44D23DF6F53D26E9 /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D0AAAB3376C5143F2C5DA26F1FBA9 /* Alamofire.swift */; };
+		F9B753040F1A1214ED367C53E4F018EB /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A3B5EA8FA6A975D000688B39A293DD61 /* YTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		004213234C2B0FCEFFA28A3DF9779E9C /* PBXContainerItemProxy */ = {
+		28EDA31CC24BBCF3D0A36A7494309287 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FD13DD7AA9DDEFC24C31A829E0AF3969;
+			remoteGlobalIDString = F35D3F2D665AEA6D2437A690FBF67C3A;
 			remoteInfo = "youtube-ios-player-helper";
+		};
+		AAE6038D00F574E199045A52AB9ADE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A40FAC35AB76E784CAF7E4A46977754 /* youtube-ios-player-helper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-prefix.pch"; sourceTree = "<group>"; };
-		0F6950FC72124604AC0C0E82C68D12D3 /* YTPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YTPlayerView.m; path = Classes/YTPlayerView.m; sourceTree = "<group>"; };
-		217B03E987F26E88740C791369CE1BF3 /* Pods-Overwatch United-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Overwatch United-dummy.m"; sourceTree = "<group>"; };
-		2CD8DDD956D27B7E87F0434376AB683C /* Pods-Overwatch United-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Overwatch United-acknowledgements.markdown"; sourceTree = "<group>"; };
-		339DCCBB199C6C1F8FF508AAA03A2255 /* Pods-Overwatch United.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Overwatch United.release.xcconfig"; sourceTree = "<group>"; };
-		57412ECC2E6F0968B0C2F3F1F1EA9F04 /* YTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTPlayerView.h; path = Classes/YTPlayerView.h; sourceTree = "<group>"; };
-		64DF77334BE64AEC6897F7ECA64684A9 /* youtube-ios-player-helper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "youtube-ios-player-helper.xcconfig"; sourceTree = "<group>"; };
-		865FAC2310658C66B97EA01757D5D769 /* Assets.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Assets.bundle; path = "youtube-ios-player-helper/Assets.bundle"; sourceTree = "<group>"; };
+		0323B372753329F2476C6B2E0908C97B /* Pods-Overwatch United-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Overwatch United-resources.sh"; sourceTree = "<group>"; };
+		03267965F7DE6C4D44D23DF6F53D26E9 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		06CB504F3982F44E29B9966033F08ED3 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		0973981C2309516FF9C31C46A72BAEC8 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		10390EB4DB434818597C9B514D60D6BB /* Pods-Overwatch United-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Overwatch United-acknowledgements.plist"; sourceTree = "<group>"; };
+		15C10A8FDB26A83903788FCCF3CFB6F6 /* youtube-ios-player-helper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "youtube-ios-player-helper.xcconfig"; sourceTree = "<group>"; };
+		17C3F70ED0031B700B34CB442A735206 /* youtube-ios-player-helper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-umbrella.h"; sourceTree = "<group>"; };
+		1CE32F5704AAAD27787AD901FEDE33AB /* youtube-ios-player-helper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-prefix.pch"; sourceTree = "<group>"; };
+		29DC949B02123149C2036C9DE53E955D /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		2FF4C5A0641235B2BFA73D7DCDC9BD01 /* Pods-Overwatch United-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Overwatch United-umbrella.h"; sourceTree = "<group>"; };
+		3082346FDECB2BC30A60AAF470A5D0AF /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		384B5BFDD7003A96A43DB3F48EA9944A /* Assets.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Assets.bundle; path = "youtube-ios-player-helper/Assets.bundle"; sourceTree = "<group>"; };
+		38B41239377D3357D44C9B76C9BF1528 /* youtube-ios-player-helper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "youtube-ios-player-helper.modulemap"; sourceTree = "<group>"; };
+		3C49EDFB3761C19AD81CBA93B243B1C6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43611DEE34983FEF04EDBE6B252DB21C /* Pods-Overwatch United-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Overwatch United-dummy.m"; sourceTree = "<group>"; };
+		4529E59BE7ACBFF802B0110EDD0DA77E /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		45749213EAA9C55035C8DCF26A40145D /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		4D2C42AFFE9C211F815371EB93BD8DE2 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		50BEB895A3A63AA52E3632680D09F696 /* Pods-Overwatch United.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Overwatch United.release.xcconfig"; sourceTree = "<group>"; };
+		5803113674F7EB4AF801B9540980C405 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		58D9D1138264D59387AD899FC65D4AA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		677A4010EB8DED738197A6B3A84CA6A4 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		67EA9FACC4448728404AE73475543732 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		6CB57D2598911EA9D3874FBACD3737BC /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		6FA1E7CE6CFEDB43FC5EAAE5A59ECE78 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7277B265763976A9AE875049F005F572 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		73F26BF3E6AC4578E7170AC6559F338D /* Pods-Overwatch United-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Overwatch United-acknowledgements.markdown"; sourceTree = "<group>"; };
+		78A95F860522D2600F4D31394DB99962 /* Pods-Overwatch United.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Overwatch United.modulemap"; sourceTree = "<group>"; };
+		8437D8B7C0975BF19CAFF3D8FE3FD620 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		8772A184F96E9A15C1B79B94344C3EA5 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		896DCCFCF5F1BA33128B4F5A46BF4D8D /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		8B3C034575E90835C73B181CDC9470D1 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A28D59833442CAD0CC86242979F507E2 /* Pods-Overwatch United-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Overwatch United-acknowledgements.plist"; sourceTree = "<group>"; };
-		A44B0B4696D6B31CD5A23C20E6A9D95C /* Pods-Overwatch United.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Overwatch United.debug.xcconfig"; sourceTree = "<group>"; };
+		A138F5DFD21AD57788CC87E85BDF38C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3B5EA8FA6A975D000688B39A293DD61 /* YTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTPlayerView.h; path = Classes/YTPlayerView.h; sourceTree = "<group>"; };
+		B83D0EFBF09E30D26E8F01B2AC8F4809 /* Pods-Overwatch United-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Overwatch United-frameworks.sh"; sourceTree = "<group>"; };
+		BBCD5CE1B9D311BC0DDBDD0FBA391B08 /* youtube_ios_player_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = youtube_ios_player_helper.framework; path = "youtube-ios-player-helper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D4BCC258493890E1578C9F15A1C48CCE /* Pods-Overwatch United-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Overwatch United-resources.sh"; sourceTree = "<group>"; };
-		ED845265A886EC9969F76295349B3E9B /* libPods-Overwatch United.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Overwatch United.a"; path = "libPods-Overwatch United.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9854330A11A25534FF093617AC68B99 /* Pods-Overwatch United-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Overwatch United-frameworks.sh"; sourceTree = "<group>"; };
-		FF34948FD76B3CBE680905B44D611257 /* libyoutube-ios-player-helper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libyoutube-ios-player-helper.a"; path = "libyoutube-ios-player-helper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFEDD2F689CF607F4114F7FE184DD249 /* youtube-ios-player-helper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "youtube-ios-player-helper-dummy.m"; sourceTree = "<group>"; };
+		D9DAA7D2535C68C6EF402F974D54DEC8 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		DE5C194B368162671377A50024C0D1CE /* YTPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YTPlayerView.m; path = Classes/YTPlayerView.m; sourceTree = "<group>"; };
+		E4B831198BED18AE95D70C50D1952BE7 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		EA442685BC17448ACE3985AE819D37D2 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		EF8D0AAAB3376C5143F2C5DA26F1FBA9 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		EFB560FC7890416B7E8A7288B3154DE6 /* youtube-ios-player-helper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "youtube-ios-player-helper-dummy.m"; sourceTree = "<group>"; };
+		F70B63C3FA54BE59093D19D0F0008C12 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		F8830BF7A44A02EDD4CD9F377D17148E /* Pods-Overwatch United.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Overwatch United.debug.xcconfig"; sourceTree = "<group>"; };
+		FF091EB9F5F27C396FCDFA62D2048739 /* Pods_Overwatch_United.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Overwatch_United.framework; path = "Pods-Overwatch United.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A12CDFD60699589988BAF8A440AD3948 /* Frameworks */ = {
+		2F6F9C541C18FBD658C77C5AC6A9013C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A41B0B36FDB6B762FB95F06220A3142 /* Foundation.framework in Frameworks */,
+				3DA4C8DB8A5F89A8B8BEDC6E14F3EC9A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9CA2EF5E316952DA19CEC59A42088A5 /* Frameworks */ = {
+		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8282F1171682EF9BB4337B833160EDB4 /* Foundation.framework in Frameworks */,
+				A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB2D300D455808A6595E0DB30DC9D590 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4076C18F3A254235A6E18B17B244907 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3AB0DF2493F47FDEC1FEAA94010F67D0 /* Pods-Overwatch United */ = {
+		0608A05B18EC201E205A26772E59A4A5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2CD8DDD956D27B7E87F0434376AB683C /* Pods-Overwatch United-acknowledgements.markdown */,
-				A28D59833442CAD0CC86242979F507E2 /* Pods-Overwatch United-acknowledgements.plist */,
-				217B03E987F26E88740C791369CE1BF3 /* Pods-Overwatch United-dummy.m */,
-				F9854330A11A25534FF093617AC68B99 /* Pods-Overwatch United-frameworks.sh */,
-				D4BCC258493890E1578C9F15A1C48CCE /* Pods-Overwatch United-resources.sh */,
-				A44B0B4696D6B31CD5A23C20E6A9D95C /* Pods-Overwatch United.debug.xcconfig */,
-				339DCCBB199C6C1F8FF508AAA03A2255 /* Pods-Overwatch United.release.xcconfig */,
+				3C49EDFB3761C19AD81CBA93B243B1C6 /* Info.plist */,
+				38B41239377D3357D44C9B76C9BF1528 /* youtube-ios-player-helper.modulemap */,
+				15C10A8FDB26A83903788FCCF3CFB6F6 /* youtube-ios-player-helper.xcconfig */,
+				EFB560FC7890416B7E8A7288B3154DE6 /* youtube-ios-player-helper-dummy.m */,
+				1CE32F5704AAAD27787AD901FEDE33AB /* youtube-ios-player-helper-prefix.pch */,
+				17C3F70ED0031B700B34CB442A735206 /* youtube-ios-player-helper-umbrella.h */,
 			);
-			name = "Pods-Overwatch United";
-			path = "Target Support Files/Pods-Overwatch United";
+			name = "Support Files";
+			path = "../Target Support Files/youtube-ios-player-helper";
 			sourceTree = "<group>";
 		};
-		74B63434E33D695524BB47A0137F3D8E /* Resources */ = {
+		1AE7E9E0701D911FEACF602A67E7B6F2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				865FAC2310658C66B97EA01757D5D769 /* Assets.bundle */,
+				8EAD87ECF7741555DC65B43832D95CE5 /* Alamofire */,
+				E30D97F8159B37FB7BBD92C1D78E4246 /* youtube-ios-player-helper */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		67F92D20FB03A52324B31FE9804FC258 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				384B5BFDD7003A96A43DB3F48EA9944A /* Assets.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -101,38 +177,36 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				EFBD6D5070879E977E70ED78BBDF7218 /* Pods */,
-				9D3B6C3D0574FA8DC7CD9C9F9F4F7647 /* Products */,
-				B63EC091AA7DAB4E0AED7BBA844E1D5E /* Targets Support Files */,
+				1AE7E9E0701D911FEACF602A67E7B6F2 /* Pods */,
+				F1C9C250BDC1589F886274C13577BB92 /* Products */,
+				DA577BB02AB4D25B612F82BCB0EAF01F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9D3B6C3D0574FA8DC7CD9C9F9F4F7647 /* Products */ = {
+		8EAD87ECF7741555DC65B43832D95CE5 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				ED845265A886EC9969F76295349B3E9B /* libPods-Overwatch United.a */,
-				FF34948FD76B3CBE680905B44D611257 /* libyoutube-ios-player-helper.a */,
+				7277B265763976A9AE875049F005F572 /* AFError.swift */,
+				EF8D0AAAB3376C5143F2C5DA26F1FBA9 /* Alamofire.swift */,
+				3082346FDECB2BC30A60AAF470A5D0AF /* DispatchQueue+Alamofire.swift */,
+				67EA9FACC4448728404AE73475543732 /* MultipartFormData.swift */,
+				E4B831198BED18AE95D70C50D1952BE7 /* NetworkReachabilityManager.swift */,
+				06CB504F3982F44E29B9966033F08ED3 /* Notifications.swift */,
+				4529E59BE7ACBFF802B0110EDD0DA77E /* ParameterEncoding.swift */,
+				5803113674F7EB4AF801B9540980C405 /* Request.swift */,
+				D9DAA7D2535C68C6EF402F974D54DEC8 /* Response.swift */,
+				03267965F7DE6C4D44D23DF6F53D26E9 /* ResponseSerialization.swift */,
+				896DCCFCF5F1BA33128B4F5A46BF4D8D /* Result.swift */,
+				45749213EAA9C55035C8DCF26A40145D /* ServerTrustPolicy.swift */,
+				EA442685BC17448ACE3985AE819D37D2 /* SessionDelegate.swift */,
+				677A4010EB8DED738197A6B3A84CA6A4 /* SessionManager.swift */,
+				F70B63C3FA54BE59093D19D0F0008C12 /* TaskDelegate.swift */,
+				8437D8B7C0975BF19CAFF3D8FE3FD620 /* Timeline.swift */,
+				0973981C2309516FF9C31C46A72BAEC8 /* Validation.swift */,
+				D6FD3FB1A40E58E3569FBEBF00ACE9C8 /* Support Files */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9F75175312662FA820011803EC0CAC9E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				64DF77334BE64AEC6897F7ECA64684A9 /* youtube-ios-player-helper.xcconfig */,
-				FFEDD2F689CF607F4114F7FE184DD249 /* youtube-ios-player-helper-dummy.m */,
-				0A40FAC35AB76E784CAF7E4A46977754 /* youtube-ios-player-helper-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/youtube-ios-player-helper";
-			sourceTree = "<group>";
-		};
-		B63EC091AA7DAB4E0AED7BBA844E1D5E /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3AB0DF2493F47FDEC1FEAA94010F67D0 /* Pods-Overwatch United */,
-			);
-			name = "Targets Support Files";
+			name = Alamofire;
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -143,64 +217,143 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C7EC8D6CFE00F4FA42CFEEFF9DB719C0 /* youtube-ios-player-helper */ = {
+		D6FD3FB1A40E58E3569FBEBF00ACE9C8 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				57412ECC2E6F0968B0C2F3F1F1EA9F04 /* YTPlayerView.h */,
-				0F6950FC72124604AC0C0E82C68D12D3 /* YTPlayerView.m */,
-				74B63434E33D695524BB47A0137F3D8E /* Resources */,
-				9F75175312662FA820011803EC0CAC9E /* Support Files */,
+				4D2C42AFFE9C211F815371EB93BD8DE2 /* Alamofire.modulemap */,
+				6CB57D2598911EA9D3874FBACD3737BC /* Alamofire.xcconfig */,
+				8B3C034575E90835C73B181CDC9470D1 /* Alamofire-dummy.m */,
+				29DC949B02123149C2036C9DE53E955D /* Alamofire-prefix.pch */,
+				8772A184F96E9A15C1B79B94344C3EA5 /* Alamofire-umbrella.h */,
+				A138F5DFD21AD57788CC87E85BDF38C2 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		DA577BB02AB4D25B612F82BCB0EAF01F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E24CE79F6EA720044EC0D0F7BBE2AD94 /* Pods-Overwatch United */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E24CE79F6EA720044EC0D0F7BBE2AD94 /* Pods-Overwatch United */ = {
+			isa = PBXGroup;
+			children = (
+				58D9D1138264D59387AD899FC65D4AA9 /* Info.plist */,
+				78A95F860522D2600F4D31394DB99962 /* Pods-Overwatch United.modulemap */,
+				73F26BF3E6AC4578E7170AC6559F338D /* Pods-Overwatch United-acknowledgements.markdown */,
+				10390EB4DB434818597C9B514D60D6BB /* Pods-Overwatch United-acknowledgements.plist */,
+				43611DEE34983FEF04EDBE6B252DB21C /* Pods-Overwatch United-dummy.m */,
+				B83D0EFBF09E30D26E8F01B2AC8F4809 /* Pods-Overwatch United-frameworks.sh */,
+				0323B372753329F2476C6B2E0908C97B /* Pods-Overwatch United-resources.sh */,
+				2FF4C5A0641235B2BFA73D7DCDC9BD01 /* Pods-Overwatch United-umbrella.h */,
+				F8830BF7A44A02EDD4CD9F377D17148E /* Pods-Overwatch United.debug.xcconfig */,
+				50BEB895A3A63AA52E3632680D09F696 /* Pods-Overwatch United.release.xcconfig */,
+			);
+			name = "Pods-Overwatch United";
+			path = "Target Support Files/Pods-Overwatch United";
+			sourceTree = "<group>";
+		};
+		E30D97F8159B37FB7BBD92C1D78E4246 /* youtube-ios-player-helper */ = {
+			isa = PBXGroup;
+			children = (
+				A3B5EA8FA6A975D000688B39A293DD61 /* YTPlayerView.h */,
+				DE5C194B368162671377A50024C0D1CE /* YTPlayerView.m */,
+				67F92D20FB03A52324B31FE9804FC258 /* Resources */,
+				0608A05B18EC201E205A26772E59A4A5 /* Support Files */,
 			);
 			name = "youtube-ios-player-helper";
 			path = "youtube-ios-player-helper";
 			sourceTree = "<group>";
 		};
-		EFBD6D5070879E977E70ED78BBDF7218 /* Pods */ = {
+		F1C9C250BDC1589F886274C13577BB92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7EC8D6CFE00F4FA42CFEEFF9DB719C0 /* youtube-ios-player-helper */,
+				6FA1E7CE6CFEDB43FC5EAAE5A59ECE78 /* Alamofire.framework */,
+				FF091EB9F5F27C396FCDFA62D2048739 /* Pods_Overwatch_United.framework */,
+				BBCD5CE1B9D311BC0DDBDD0FBA391B08 /* youtube_ios_player_helper.framework */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6CA4C2001DC87EE93477AF1C4FCEAD30 /* Headers */ = {
+		542FA517AB14AB3776FBC2B5930F29AD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C94472786B470A076ABCCAC833E6E49B /* YTPlayerView.h in Headers */,
+				DC78E19780B6BFE21A54A74604D74CA9 /* youtube-ios-player-helper-umbrella.h in Headers */,
+				F9B753040F1A1214ED367C53E4F018EB /* YTPlayerView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06E798C5D5393BE20FA54BBC24F66D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E21D420480FC6531525ED0AAD5CE8B6C /* Pods-Overwatch United-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E78E12140620783AD36AF5C7AB90FAAE /* Pods-Overwatch United */ = {
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30B4E646E7EB1CC55776F9EA6230681E /* Build configuration list for PBXNativeTarget "Pods-Overwatch United" */;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				18CD0D3D445E4C24549B6137D3B81849 /* Sources */,
-				F9CA2EF5E316952DA19CEC59A42088A5 /* Frameworks */,
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				630716A26C54E25685CFD67F903E84EE /* PBXTargetDependency */,
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 6FA1E7CE6CFEDB43FC5EAAE5A59ECE78 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A8A775859A8B1ACC98B73DE0F1C7ADF2 /* Pods-Overwatch United */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0657ABD3248233961CB3C375867680B5 /* Build configuration list for PBXNativeTarget "Pods-Overwatch United" */;
+			buildPhases = (
+				97A2E77EAEB4C47A975ACA734F2F8ACC /* Sources */,
+				EB2D300D455808A6595E0DB30DC9D590 /* Frameworks */,
+				C06E798C5D5393BE20FA54BBC24F66D5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B89E914B8F641EE91A0D6171387A69E /* PBXTargetDependency */,
+				6C073B3DB1FB1DF873FA34EB203C6442 /* PBXTargetDependency */,
 			);
 			name = "Pods-Overwatch United";
 			productName = "Pods-Overwatch United";
-			productReference = ED845265A886EC9969F76295349B3E9B /* libPods-Overwatch United.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = FF091EB9F5F27C396FCDFA62D2048739 /* Pods_Overwatch_United.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		FD13DD7AA9DDEFC24C31A829E0AF3969 /* youtube-ios-player-helper */ = {
+		F35D3F2D665AEA6D2437A690FBF67C3A /* youtube-ios-player-helper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 567E2E804C92A62B9D24F70F1F246C07 /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */;
+			buildConfigurationList = B92055F6791BFBF93425F5EE87A0EF0A /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */;
 			buildPhases = (
-				AEA333D86F355B0F6ECE5C83F02678AB /* Sources */,
-				A12CDFD60699589988BAF8A440AD3948 /* Frameworks */,
-				6CA4C2001DC87EE93477AF1C4FCEAD30 /* Headers */,
+				CF76868F1F0B8B0D6417C41F3472EA03 /* Sources */,
+				2F6F9C541C18FBD658C77C5AC6A9013C /* Frameworks */,
+				542FA517AB14AB3776FBC2B5930F29AD /* Headers */,
+				5B77FAE9C5CDEF26194B406AFC9AA92D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -208,8 +361,8 @@
 			);
 			name = "youtube-ios-player-helper";
 			productName = "youtube-ios-player-helper";
-			productReference = FF34948FD76B3CBE680905B44D611257 /* libyoutube-ios-player-helper.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = BBCD5CE1B9D311BC0DDBDD0FBA391B08 /* youtube_ios_player_helper.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -228,66 +381,153 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9D3B6C3D0574FA8DC7CD9C9F9F4F7647 /* Products */;
+			productRefGroup = F1C9C250BDC1589F886274C13577BB92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E78E12140620783AD36AF5C7AB90FAAE /* Pods-Overwatch United */,
-				FD13DD7AA9DDEFC24C31A829E0AF3969 /* youtube-ios-player-helper */,
+				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
+				A8A775859A8B1ACC98B73DE0F1C7ADF2 /* Pods-Overwatch United */,
+				F35D3F2D665AEA6D2437A690FBF67C3A /* youtube-ios-player-helper */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		18CD0D3D445E4C24549B6137D3B81849 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		5B77FAE9C5CDEF26194B406AFC9AA92D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A866B53A8F9A3E0C43CA4B95E1102F32 /* Pods-Overwatch United-dummy.m in Sources */,
+				ECBD9C05B8FD831776C90F0A0053CCD4 /* Assets.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEA333D86F355B0F6ECE5C83F02678AB /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F7B41D1D6C52D81E62C382A6CEA3B4B /* youtube-ios-player-helper-dummy.m in Sources */,
-				FBF0F451A51FC679249446BA0999C13A /* YTPlayerView.m in Sources */,
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
+				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
+				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
+				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
+				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
+				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
+				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
+				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
+				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
+				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
+				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
+				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
+				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
+				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
+				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
+				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97A2E77EAEB4C47A975ACA734F2F8ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82882DC8E24AB50A0FEF8B6CC915065F /* Pods-Overwatch United-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF76868F1F0B8B0D6417C41F3472EA03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69653863A41A6C103851F411DD5A6F9 /* youtube-ios-player-helper-dummy.m in Sources */,
+				B9B1F474AC9E669F3B1FB512BAFB24A5 /* YTPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		630716A26C54E25685CFD67F903E84EE /* PBXTargetDependency */ = {
+		5B89E914B8F641EE91A0D6171387A69E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = AAE6038D00F574E199045A52AB9ADE47 /* PBXContainerItemProxy */;
+		};
+		6C073B3DB1FB1DF873FA34EB203C6442 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "youtube-ios-player-helper";
-			target = FD13DD7AA9DDEFC24C31A829E0AF3969 /* youtube-ios-player-helper */;
-			targetProxy = 004213234C2B0FCEFFA28A3DF9779E9C /* PBXContainerItemProxy */;
+			target = F35D3F2D665AEA6D2437A690FBF67C3A /* youtube-ios-player-helper */;
+			targetProxy = 28EDA31CC24BBCF3D0A36A7494309287 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		18ABBC3C7ADD44B57E598F82E9F4E551 /* Release */ = {
+		0A29B6F510198AF64EFD762EF6FA97A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 339DCCBB199C6C1F8FF508AAA03A2255 /* Pods-Overwatch United.release.xcconfig */;
+			baseConfigurationReference = 6CB57D2598911EA9D3874FBACD3737BC /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		221DD7A9E7B1E2CD5D9178F34DAAF718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50BEB895A3A63AA52E3632680D09F696 /* Pods-Overwatch United.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Overwatch United/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Overwatch United/Pods-Overwatch United.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_Overwatch_United;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -331,76 +571,105 @@
 			};
 			name = Release;
 		};
-		71328126FC3E3A7CF1625F3E9841D89A /* Debug */ = {
+		809575ACB1F83A5607E8FF59CCE38643 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A44B0B4696D6B31CD5A23C20E6A9D95C /* Pods-Overwatch United.debug.xcconfig */;
+			baseConfigurationReference = 15C10A8FDB26A83903788FCCF3CFB6F6 /* youtube-ios-player-helper.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = youtube_ios_player_helper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9275216FFC02D5176DF13B9CBD5BF51E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15C10A8FDB26A83903788FCCF3CFB6F6 /* youtube-ios-player-helper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = youtube_ios_player_helper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C51032F56B71E68D7B532FE0A553A96D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8830BF7A44A02EDD4CD9F377D17148E /* Pods-Overwatch United.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Overwatch United/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Overwatch United/Pods-Overwatch United.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_Overwatch_United;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		B3D54235352D98D9C5ECCF17ABC1CC2C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64DF77334BE64AEC6897F7ECA64684A9 /* youtube-ios-player-helper.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		E05B1A735307F734820A8D1460BBBB79 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64DF77334BE64AEC6897F7ECA64684A9 /* youtube-ios-player-helper.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
 		};
 		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -446,9 +715,51 @@
 			};
 			name = Debug;
 		};
+		F383079BFBF927813EA3613CFB679FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB57D2598911EA9D3874FBACD3737BC /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0657ABD3248233961CB3C375867680B5 /* Build configuration list for PBXNativeTarget "Pods-Overwatch United" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C51032F56B71E68D7B532FE0A553A96D /* Debug */,
+				221DD7A9E7B1E2CD5D9178F34DAAF718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -458,20 +769,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30B4E646E7EB1CC55776F9EA6230681E /* Build configuration list for PBXNativeTarget "Pods-Overwatch United" */ = {
+		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71328126FC3E3A7CF1625F3E9841D89A /* Debug */,
-				18ABBC3C7ADD44B57E598F82E9F4E551 /* Release */,
+				F383079BFBF927813EA3613CFB679FDE /* Debug */,
+				0A29B6F510198AF64EFD762EF6FA97A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		567E2E804C92A62B9D24F70F1F246C07 /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */ = {
+		B92055F6791BFBF93425F5EE87A0EF0A /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B3D54235352D98D9C5ECCF17ABC1CC2C /* Debug */,
-				E05B1A735307F734820A8D1460BBBB79 /* Release */,
+				9275216FFC02D5176DF13B9CBD5BF51E /* Debug */,
+				809575ACB1F83A5607E8FF59CCE38643 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

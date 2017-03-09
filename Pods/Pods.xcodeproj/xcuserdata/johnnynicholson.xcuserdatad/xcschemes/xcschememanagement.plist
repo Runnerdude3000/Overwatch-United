@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Overwatch United.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E78E12140620783AD36AF5C7AB90FAAE</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD13DD7AA9DDEFC24C31A829E0AF3969</key>
+		<key>A8A775859A8B1ACC98B73DE0F1C7ADF2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F35D3F2D665AEA6D2437A690FBF67C3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -31,9 +31,5 @@ class OverwatchVid
         _imageURL = imageURL
         _videoURL = videoURL
         _videoTitle = videoTitle
-    }
-    
-    
-    
-    
+    } 
 }

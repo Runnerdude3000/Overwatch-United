@@ -24,7 +24,6 @@ class VideoCell: UITableViewCell
         super.setSelected(selected, animated: animated)
     }
     
-    
     //to update table cell upon refresh
     func updateCellUI(video: OverwatchVid)
     {
@@ -47,9 +46,5 @@ class VideoCell: UITableViewCell
                     //handle the error
             }
         }
-
     }
-    
-    
-
 }

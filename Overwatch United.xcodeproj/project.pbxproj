@@ -11,6 +11,11 @@
 		9025FA171E54EBB7008C62E8 /* OverwatchVid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */; };
 		902B4B091E70B6E60064AEAE /* ProfileScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B4B081E70B6E60064AEAE /* ProfileScreenVC.swift */; };
 		9041D1CA1E54E34E00E5DE7C /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9041D1C91E54E34E00E5DE7C /* VideoCell.swift */; };
+		908383C31E71A1E000DB32E8 /* HeroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908383C21E71A1E000DB32E8 /* HeroVC.swift */; };
+		908C87031E71AC89001B348A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87021E71AC89001B348A /* Hero.swift */; };
+		908C87061E71B0B8001B348A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87051E71B0B8001B348A /* Constants.swift */; };
+		908C87081E71BBEF001B348A /* HeroDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87071E71BBEF001B348A /* HeroDetailVC.swift */; };
+		908C870A1E71BEEA001B348A /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87091E71BEEA001B348A /* HeroCell.swift */; };
 		90B697D81E53D655008D0453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B697D71E53D655008D0453 /* AppDelegate.swift */; };
 		90B697DA1E53D655008D0453 /* LoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B697D91E53D655008D0453 /* LoginScreenVC.swift */; };
 		90B697DD1E53D655008D0453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90B697DB1E53D655008D0453 /* Main.storyboard */; };
@@ -28,7 +33,7 @@
 		90B698121E53E52C008D0453 /* NewsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B698111E53E52C008D0453 /* NewsScreenVC.swift */; };
 		90B698131E53E52C008D0453 /* NewsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B698111E53E52C008D0453 /* NewsScreenVC.swift */; };
 		90B698141E53E52C008D0453 /* NewsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B698111E53E52C008D0453 /* NewsScreenVC.swift */; };
-		A5F8B8D6DB0C8C7BDC848C75 /* libPods-Overwatch United.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A03597B77E775AAE3BFA51 /* libPods-Overwatch United.a */; };
+		A327D15F0EB55EB4BD9E9C1E /* Pods_Overwatch_United.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB75B878F52778D92C1959E /* Pods_Overwatch_United.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverwatchVid.swift; sourceTree = "<group>"; };
 		902B4B081E70B6E60064AEAE /* ProfileScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenVC.swift; sourceTree = "<group>"; };
 		9041D1C91E54E34E00E5DE7C /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		908383C21E71A1E000DB32E8 /* HeroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroVC.swift; sourceTree = "<group>"; };
+		908C87021E71AC89001B348A /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		908C87051E71B0B8001B348A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		908C87071E71BBEF001B348A /* HeroDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailVC.swift; sourceTree = "<group>"; };
+		908C87091E71BEEA001B348A /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		90B697D41E53D655008D0453 /* Overwatch United.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Overwatch United.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B697D71E53D655008D0453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90B697D91E53D655008D0453 /* LoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenVC.swift; sourceTree = "<group>"; };
@@ -72,7 +82,7 @@
 		90B698091E53D919008D0453 /* koverwatch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = koverwatch.ttf; sourceTree = "<group>"; };
 		90B6980D1E53D927008D0453 /* bignoodletoo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bignoodletoo.ttf; sourceTree = "<group>"; };
 		90B698111E53E52C008D0453 /* NewsScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsScreenVC.swift; sourceTree = "<group>"; };
-		D9A03597B77E775AAE3BFA51 /* libPods-Overwatch United.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Overwatch United.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB75B878F52778D92C1959E /* Pods_Overwatch_United.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overwatch_United.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F8B8D6DB0C8C7BDC848C75 /* libPods-Overwatch United.a in Frameworks */,
+				A327D15F0EB55EB4BD9E9C1E /* Pods_Overwatch_United.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +114,7 @@
 		0CC5BF2C73FF8EDAF22FCA0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D9A03597B77E775AAE3BFA51 /* libPods-Overwatch United.a */,
+				CDB75B878F52778D92C1959E /* Pods_Overwatch_United.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +131,7 @@
 		90030A871E70A6C50072B141 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				908C87041E71B0A6001B348A /* Util */,
 				90B698091E53D919008D0453 /* koverwatch.ttf */,
 				90B6980D1E53D927008D0453 /* bignoodletoo.ttf */,
 			);
@@ -131,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */,
+				908C87021E71AC89001B348A /* Hero.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -139,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9041D1C91E54E34E00E5DE7C /* VideoCell.swift */,
+				908C87091E71BEEA001B348A /* HeroCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -150,8 +163,18 @@
 				90B698111E53E52C008D0453 /* NewsScreenVC.swift */,
 				9025FA141E54E8DE008C62E8 /* VideoVC.swift */,
 				902B4B081E70B6E60064AEAE /* ProfileScreenVC.swift */,
+				908383C21E71A1E000DB32E8 /* HeroVC.swift */,
+				908C87071E71BBEF001B348A /* HeroDetailVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		908C87041E71B0A6001B348A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				908C87051E71B0B8001B348A /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		90B697CB1E53D655008D0453 = {
@@ -406,12 +429,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9025FA151E54E8DE008C62E8 /* VideoVC.swift in Sources */,
+				908C870A1E71BEEA001B348A /* HeroCell.swift in Sources */,
+				908C87061E71B0B8001B348A /* Constants.swift in Sources */,
 				90B698121E53E52C008D0453 /* NewsScreenVC.swift in Sources */,
+				908C87081E71BBEF001B348A /* HeroDetailVC.swift in Sources */,
 				902B4B091E70B6E60064AEAE /* ProfileScreenVC.swift in Sources */,
 				90B697DA1E53D655008D0453 /* LoginScreenVC.swift in Sources */,
 				90B697E01E53D655008D0453 /* Overwatch_United.xcdatamodeld in Sources */,
+				908C87031E71AC89001B348A /* Hero.swift in Sources */,
 				9025FA171E54EBB7008C62E8 /* OverwatchVid.swift in Sources */,
 				90B697D81E53D655008D0453 /* AppDelegate.swift in Sources */,
+				908383C31E71A1E000DB32E8 /* HeroVC.swift in Sources */,
 				9041D1CA1E54E34E00E5DE7C /* VideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
