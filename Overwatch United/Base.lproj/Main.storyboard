@@ -90,7 +90,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="243" height="31"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done"/>
                                         <connections>
                                             <action selector="userNameEntered:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="KJR-h5-PM6"/>
                                         </connections>
@@ -99,7 +99,7 @@
                                         <rect key="frame" x="0.0" y="46" width="243" height="31"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="passwordEntered:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="SbF-4t-qiU"/>
                                         </connections>
@@ -112,6 +112,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="reg-GG-aer"/>
                                             <segue destination="69s-dx-o3X" kind="show" identifier="NewsScreen" id="Xc3-NZ-13X"/>
                                         </connections>
                                     </button>

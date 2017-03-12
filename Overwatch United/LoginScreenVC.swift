@@ -75,6 +75,31 @@ class LoginScreenVC: UIViewController
         })
     }
     
+    @IBAction func loginPressed(_ sender: UIButton)
+    {
+        if let email = userNameField.text, let password = passwordField.text
+        {
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil
+                {
+                    print("Email successfully authenticated with Firebase")
+                }
+                else
+                {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        if error != nil
+                        {
+                            print("ERROR: Unable to authenticate email with Firebase")
+                        }
+                        else
+                        {
+                            print("Email authentication successful")
+                        }
+                    })
+                }
+            })
+        }
+    }
     
     
     
