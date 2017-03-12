@@ -11,27 +11,45 @@ import AVFoundation
 
 class HeroVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
-    @IBOutlet weak var collectionView: UICollectionView!
+  
+    @IBOutlet weak var collection: UICollectionView!
     
-    var hero: Hero!
     var heroes = [Hero]()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        collection.dataSource = self
+        collection.delegate = self
         
-        appendHerores()
+        appendHeroes()
+       
     }
     
-    func appendHerores()
+    func appendHeroes()
     {
-        for _ in heroes
+        let path = Bundle.main.path(forResource: "overwatch", ofType: "csv")
+        
+        do
         {
-            let heroItem = Hero(name: hero.name)
-            heroes.append(heroItem)
+            let csv = try CSV(contentsOfURL: path!)
+            let rows = csv.rows
+            print(rows)
+            
+            for row in rows
+            {
+                let heroID = Int(row["id"]!)!
+                let heroName = row["name"]!
+                
+                let hero = Hero(name: heroName, heroID: heroID)
+                heroes.append(hero)
+            }
+            print(heroes)
+        }
+        catch let err as NSError
+        {
+            print(err.debugDescription)
         }
     }
     
@@ -39,9 +57,9 @@ class HeroVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell", for: indexPath) as? HeroCell
         {
-            let hero: Hero!
-            hero = heroes[indexPath.row]
-            cell.configureCell(hero)
+            let character: Hero!
+            character = heroes[indexPath.row]
+            cell.configureCell(character)
             return cell
         }
         else
@@ -52,10 +70,10 @@ class HeroVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        var hero: Hero!
+        var character: Hero!
         
-        hero = heroes[indexPath.row]
-        performSegue(withIdentifier: "HeroDetailVC", sender: hero)
+        character = heroes[indexPath.row]
+        performSegue(withIdentifier: "HeroDetailVC", sender: character)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int

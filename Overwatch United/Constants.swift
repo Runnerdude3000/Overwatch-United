@@ -6,7 +6,7 @@
 //  Copyright © 2017 Johnny Nicholson. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 typealias DownloadComplete = () -> ()
 
@@ -14,3 +14,5 @@ let URL_BASE = "https://overwatch-api.net/"
 
 let URL_HERO = "api/v1/hero"
 
+
+let SHADOW_GRAY: CGFloat = 120.0 / 255.0

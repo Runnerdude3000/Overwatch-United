@@ -10,22 +10,24 @@ import UIKit
 
 class HeroCell: UICollectionViewCell
 {
-    var hero: Hero!
+   
     
-    @IBOutlet weak var heroImage: UIImageView!
-    @IBOutlet weak var heroLabel: UILabel!
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellLabel: UILabel!
+   
+    var hero: Hero!
     
     required init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-        layer.cornerRadius = 10.0
+        layer.cornerRadius = 5.0
     }
     
     func configureCell(_ hero: Hero)
     {
         self.hero = hero
         
-        heroLabel.text = self.hero.name.capitalized
-        heroImage.image = UIImage(named: self.hero.name)
+        cellLabel.text = self.hero.name.capitalized
+        cellImage.image = UIImage(named: String(self.hero.heroID))
     }
 }

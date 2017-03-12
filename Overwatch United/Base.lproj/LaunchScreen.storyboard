@@ -17,39 +17,53 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="H6V-Yg-RIh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="b5W-jh-xgm">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainSymbol" translatesAutoresizingMaskIntoConstraints="NO" id="Gsn-JW-dhv">
-                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJa-91-DWg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="G2V-w0-ywt">
+                                        <rect key="frame" x="8" y="38" width="304" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="304" id="8BV-MS-PFA"/>
+                                            <constraint firstAttribute="height" constant="75" id="dqU-Yt-5wa"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.53500801320000002" green="0.59367674589999997" blue="0.7265613675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Cof-qX-EK3"/>
-                                    <constraint firstAttribute="height" constant="240" id="opd-WG-KiS"/>
+                                    <constraint firstItem="G2V-w0-ywt" firstAttribute="centerY" secondItem="SJa-91-DWg" secondAttribute="centerY" id="FbY-Rb-Ye7"/>
+                                    <constraint firstItem="G2V-w0-ywt" firstAttribute="centerX" secondItem="SJa-91-DWg" secondAttribute="centerX" id="Kts-gq-fWY"/>
+                                    <constraint firstAttribute="height" constant="150" id="u3u-WC-EOg"/>
                                 </constraints>
-                            </imageView>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-KS-fEJ">
+                                <rect key="frame" x="0.0" y="493" width="320" height="75"/>
+                                <color key="backgroundColor" red="0.53500801320000002" green="0.59367674589999997" blue="0.7265613675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="umR-sl-5YL"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.17025443909999999" green="0.2252506316" blue="0.33315461870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="b5W-jh-xgm" secondAttribute="trailing" id="3X6-5K-gLh"/>
-                            <constraint firstItem="b5W-jh-xgm" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="3g2-oF-hP2"/>
-                            <constraint firstItem="Gsn-JW-dhv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NvO-K8-Czh"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="b5W-jh-xgm" secondAttribute="bottom" id="UzX-mB-p2v"/>
-                            <constraint firstItem="Gsn-JW-dhv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="d24-UR-PIf"/>
-                            <constraint firstItem="b5W-jh-xgm" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nnS-he-kmD"/>
+                            <constraint firstItem="SJa-91-DWg" firstAttribute="leading" secondItem="H6V-Yg-RIh" secondAttribute="leading" id="Dso-ee-SMh"/>
+                            <constraint firstAttribute="trailing" secondItem="2dS-KS-fEJ" secondAttribute="trailing" id="E4Y-EP-Kvr"/>
+                            <constraint firstAttribute="trailing" secondItem="SJa-91-DWg" secondAttribute="trailing" id="X7y-my-nFB"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="2dS-KS-fEJ" secondAttribute="bottom" id="qeI-WC-d07"/>
+                            <constraint firstItem="2dS-KS-fEJ" firstAttribute="leading" secondItem="H6V-Yg-RIh" secondAttribute="leading" id="r7n-Fx-mnL"/>
+                            <constraint firstItem="SJa-91-DWg" firstAttribute="top" secondItem="H6V-Yg-RIh" secondAttribute="top" id="uM9-S5-al2"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.599999999999994" y="119.1904047976012"/>
+            <point key="canvasLocation" x="84.375" y="118.30985915492958"/>
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="640" height="1136"/>
-        <image name="mainSymbol" width="300" height="300"/>
+        <image name="Title" width="1000" height="153"/>
     </resources>
 </document>
