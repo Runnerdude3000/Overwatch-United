@@ -113,7 +113,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="reg-GG-aer"/>
-                                            <segue destination="69s-dx-o3X" kind="show" identifier="NewsScreen" id="Xc3-NZ-13X"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -140,6 +139,7 @@
                     <connections>
                         <outlet property="passwordField" destination="tYO-yr-7tz" id="mLH-fn-M06"/>
                         <outlet property="userNameField" destination="b03-d9-pmC" id="Ndu-tg-x8Y"/>
+                        <segue destination="69s-dx-o3X" kind="show" identifier="LoginSegue" id="WpV-7U-HUX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

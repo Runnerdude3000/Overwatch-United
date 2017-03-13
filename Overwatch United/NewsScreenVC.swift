@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
+import Firebase
 
 class NewsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
@@ -46,7 +48,10 @@ class NewsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @IBAction func logoutPressed(_ sender: UIButton)
     {
+        KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        try! FIRAuth.auth()?.signOut()
         dismiss(animated: true, completion: nil)
+        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell

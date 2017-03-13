@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class LoginScreenVC: UIViewController
 {
@@ -20,6 +21,14 @@ class LoginScreenVC: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID)
+        {
+            performSegue(withIdentifier: "LoginSegue", sender: nil)
+        }
     }
 
     @IBAction func userNameEntered(_ sender: UITextField)
@@ -71,6 +80,12 @@ class LoginScreenVC: UIViewController
             else
             {
                 print("Successfully authenticated with Firebase")
+                if let user = user
+                {
+                    self.completeSignIn(id: user.uid)
+                }
+               
+                
             }
         })
     }
@@ -83,6 +98,10 @@ class LoginScreenVC: UIViewController
                 if error == nil
                 {
                     print("Email successfully authenticated with Firebase")
+                    if let user = user
+                    {
+                        self.completeSignIn(id: user.uid)
+                    }
                 }
                 else
                 {
@@ -101,7 +120,11 @@ class LoginScreenVC: UIViewController
         }
     }
     
-    
+    func completeSignIn(id: String)
+    {
+        KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        performSegue(withIdentifier: "LoginSegue", sender: nil)
+    }
     
     
     

@@ -16,3 +16,5 @@ let URL_HERO = "api/v1/hero"
 
 
 let SHADOW_GRAY: CGFloat = 120.0 / 255.0
+
+let KEY_UID = "uid"
