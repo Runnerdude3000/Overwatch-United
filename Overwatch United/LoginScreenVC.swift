@@ -125,15 +125,5 @@ class LoginScreenVC: UIViewController
         KeychainWrapper.standard.set(id, forKey: KEY_UID)
         performSegue(withIdentifier: "LoginSegue", sender: nil)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 

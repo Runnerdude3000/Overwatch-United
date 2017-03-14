@@ -35,7 +35,9 @@
 		90B698131E53E52C008D0453 /* NewsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B698111E53E52C008D0453 /* NewsScreenVC.swift */; };
 		90B698141E53E52C008D0453 /* NewsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B698111E53E52C008D0453 /* NewsScreenVC.swift */; };
 		90B77F8E1E75BB0000FE6CD9 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B77F8D1E75BB0000FE6CD9 /* ButtonView.swift */; };
-		90B77F901E75BED600FE6CD9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B77F8F1E75BED600FE6CD9 /* LoginView.swift */; };
+		90B77F901E75BED600FE6CD9 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B77F8F1E75BED600FE6CD9 /* View.swift */; };
+		90ED157A1E784DDE000FCC0D /* ForumsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ED15791E784DDE000FCC0D /* ForumsScreenVC.swift */; };
+		90ED157C1E78597F000FCC0D /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ED157B1E78597F000FCC0D /* CircleImageView.swift */; };
 		90FB96691E72E81700C550EC /* overwatch.csv in Resources */ = {isa = PBXBuildFile; fileRef = 90FB96681E72E81700C550EC /* overwatch.csv */; };
 		90FB966B1E72E84500C550EC /* Csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB966A1E72E84500C550EC /* Csv.swift */; };
 		A327D15F0EB55EB4BD9E9C1E /* Pods_Overwatch_United.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB75B878F52778D92C1959E /* Pods_Overwatch_United.framework */; };
@@ -89,8 +91,10 @@
 		90B6980D1E53D927008D0453 /* bignoodletoo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bignoodletoo.ttf; sourceTree = "<group>"; };
 		90B698111E53E52C008D0453 /* NewsScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsScreenVC.swift; sourceTree = "<group>"; };
 		90B77F8D1E75BB0000FE6CD9 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		90B77F8F1E75BED600FE6CD9 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		90B77F8F1E75BED600FE6CD9 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		90B77F911E75CC3100FE6CD9 /* Overwatch United.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Overwatch United.entitlements"; sourceTree = "<group>"; };
+		90ED15791E784DDE000FCC0D /* ForumsScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumsScreenVC.swift; sourceTree = "<group>"; };
+		90ED157B1E78597F000FCC0D /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		90FB96681E72E81700C550EC /* overwatch.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = overwatch.csv; sourceTree = "<group>"; };
 		90FB966A1E72E84500C550EC /* Csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Csv.swift; sourceTree = "<group>"; };
 		CDB75B878F52778D92C1959E /* Pods_Overwatch_United.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overwatch_United.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +169,8 @@
 				9041D1C91E54E34E00E5DE7C /* VideoCell.swift */,
 				908C87091E71BEEA001B348A /* HeroCell.swift */,
 				90B77F8D1E75BB0000FE6CD9 /* ButtonView.swift */,
-				90B77F8F1E75BED600FE6CD9 /* LoginView.swift */,
+				90B77F8F1E75BED600FE6CD9 /* View.swift */,
+				90ED157B1E78597F000FCC0D /* CircleImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				902B4B081E70B6E60064AEAE /* ProfileScreenVC.swift */,
 				908383C21E71A1E000DB32E8 /* HeroVC.swift */,
 				908C87071E71BBEF001B348A /* HeroDetailVC.swift */,
+				90ED15791E784DDE000FCC0D /* ForumsScreenVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -462,11 +468,13 @@
 				902B4B091E70B6E60064AEAE /* ProfileScreenVC.swift in Sources */,
 				90B697DA1E53D655008D0453 /* LoginScreenVC.swift in Sources */,
 				90B697E01E53D655008D0453 /* Overwatch_United.xcdatamodeld in Sources */,
+				90ED157C1E78597F000FCC0D /* CircleImageView.swift in Sources */,
 				908C87031E71AC89001B348A /* Hero.swift in Sources */,
 				9025FA171E54EBB7008C62E8 /* OverwatchVid.swift in Sources */,
+				90ED157A1E784DDE000FCC0D /* ForumsScreenVC.swift in Sources */,
 				90B697D81E53D655008D0453 /* AppDelegate.swift in Sources */,
 				908383C31E71A1E000DB32E8 /* HeroVC.swift in Sources */,
-				90B77F901E75BED600FE6CD9 /* LoginView.swift in Sources */,
+				90B77F901E75BED600FE6CD9 /* View.swift in Sources */,
 				9041D1CA1E54E34E00E5DE7C /* VideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
