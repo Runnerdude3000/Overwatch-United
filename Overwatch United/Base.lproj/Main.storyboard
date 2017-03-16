@@ -149,7 +149,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
+            <point key="canvasLocation" x="24" y="68"/>
         </scene>
         <!--Profile ScreenVC-->
         <scene sceneID="sDc-Fu-z7z">
@@ -381,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hd-Xq-wAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="-654"/>
+            <point key="canvasLocation" x="745" y="-749"/>
         </scene>
         <!--HeroVC-->
         <scene sceneID="TKq-kI-Rge">
@@ -492,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLZ-4w-iZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472.8" y="-653.52323838080963"/>
+            <point key="canvasLocation" x="1473" y="-750"/>
         </scene>
         <!--Hero DetailVC-->
         <scene sceneID="BHm-2w-8kx">
@@ -677,7 +677,7 @@
                     </subviews>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="2261.5999999999999" y="-654.42278860569718"/>
+            <point key="canvasLocation" x="2262" y="-751"/>
         </scene>
         <!--News ScreenVC-->
         <scene sceneID="0Wc-C8-1Wy">
@@ -765,7 +765,6 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overwatch Developer Update" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dne-Sy-QRw">
                                                     <rect key="frame" x="109" y="45" width="205" height="23"/>
-                                                    <color key="backgroundColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="23" id="hzg-zQ-CBm"/>
                                                         <constraint firstAttribute="width" constant="205" id="kyZ-hh-8Lm"/>
@@ -809,7 +808,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usy-p2-cDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="35"/>
+            <point key="canvasLocation" x="745" y="68"/>
         </scene>
         <!--Forums ScreenVC-->
         <scene sceneID="WYZ-Zk-GtE">
@@ -906,19 +905,19 @@
                                     <constraint firstAttribute="height" constant="62" id="uL7-7A-MS0"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="280" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-CW-JJn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="280" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-CW-JJn">
                                 <rect key="frame" x="0.0" y="184" width="375" height="483"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.53500801320000002" green="0.59367674589999997" blue="0.7265613675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="280" id="YiA-cX-kpt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForumsCell" rowHeight="280" id="YiA-cX-kpt" customClass="ForumsCell" customModule="Overwatch_United" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="280"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YiA-cX-kpt" id="Xe3-BG-61k">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="279"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-6c-Nix" customClass="View" customModule="Overwatch_United" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="359" height="263"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="264"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gSW-3E-Rbd">
                                                             <rect key="frame" x="8" y="8" width="46" height="46"/>
@@ -964,16 +963,16 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OPF-Mk-m3w">
-                                                            <rect key="frame" x="8" y="247" width="52.5" height="11"/>
+                                                            <rect key="frame" x="8" y="247" width="52.5" height="12"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-AI-VFw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="21" height="11"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="21" height="12"/>
                                                                     <fontDescription key="fontDescription" name="Koverwatch" family="Koverwatch" pointSize="14"/>
                                                                     <color key="textColor" red="0.97666758300000001" green="0.57886129620000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzD-aL-e6L">
-                                                                    <rect key="frame" x="31" y="0.0" width="21.5" height="11"/>
+                                                                    <rect key="frame" x="31" y="0.0" width="21.5" height="12"/>
                                                                     <fontDescription key="fontDescription" name="Koverwatch" family="Koverwatch" pointSize="14"/>
                                                                     <color key="textColor" red="0.97666758300000001" green="0.57886129620000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -999,6 +998,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.53500801320000002" green="0.59367674589999997" blue="0.7265613675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="1Ze-6c-Nix" firstAttribute="leading" secondItem="Xe3-BG-61k" secondAttribute="leading" constant="8" id="2HA-yf-6jt"/>
                                                 <constraint firstAttribute="trailing" secondItem="1Ze-6c-Nix" secondAttribute="trailing" constant="8" id="3bg-1l-mAT"/>
@@ -1006,6 +1006,13 @@
                                                 <constraint firstItem="1Ze-6c-Nix" firstAttribute="top" secondItem="Xe3-BG-61k" secondAttribute="top" constant="8" id="xVU-Ws-cET"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="FYc-dy-7sC" id="RiV-TI-ZN5"/>
+                                            <outlet property="likesLbl" destination="mzD-aL-e6L" id="yaE-z0-MhS"/>
+                                            <outlet property="postImg" destination="2Ym-c4-11D" id="rfc-RZ-2RI"/>
+                                            <outlet property="profileImg" destination="gSW-3E-Rbd" id="caI-pk-Hvj"/>
+                                            <outlet property="userNameLbl" destination="CJ0-AT-xxw" id="N95-aP-QHG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1024,10 +1031,13 @@
                             <constraint firstAttribute="trailing" secondItem="6u6-Pj-8Us" secondAttribute="trailing" id="s7a-nz-IMA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="VFK-CW-JJn" id="JQO-Og-lDQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1TJ-zF-mpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.79999999999995" y="815.44227886056979"/>
+            <point key="canvasLocation" x="745" y="855"/>
         </scene>
         <!--VideoVC-->
         <scene sceneID="QMP-4J-j2p">
@@ -1088,7 +1098,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwq-dE-ILP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1473" y="35"/>
+            <point key="canvasLocation" x="1473" y="68"/>
         </scene>
     </scenes>
     <resources>
