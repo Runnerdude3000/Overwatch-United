@@ -28,38 +28,22 @@ class Hero
     
     var description: String
     {
-        if _description == nil
-        {
-            _description = ""
-        }
-        return _description
+        return _description ?? ""
     }
     
     var health: String
     {
-        if _health == nil
-        {
-            _health = ""
-        }
-        return _health
+        return _health ?? ""
     }
     
     var armour: String
     {
-        if _armour == nil
-        {
-            _armour = ""
-        }
-        return _armour
+        return _armour ?? ""
     }
     
     var shield: String
     {
-        if _shield == nil
-        {
-            _shield = ""
-        }
-        return _shield
+        return _shield ?? ""
     }
     
     var heroID: Int
@@ -69,20 +53,12 @@ class Hero
     
     var heroURL: String
     {
-        if _heroURL == nil
-        {
-            _heroURL = ""
-        }
-        return _heroURL
+        return _heroURL ?? ""
     }
     
     var difficulty: String
     {
-        if _difficulty == nil
-        {
-            _difficulty = ""
-        }
-        return _difficulty
+        return _difficulty ?? ""
     }
     
     init(name: String, heroID: Int)

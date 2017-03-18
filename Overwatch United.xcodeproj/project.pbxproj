@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90140DAE1E7DD0BD0045AAAA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90140DAD1E7DD0BD0045AAAA /* DataService.swift */; };
 		902065C61E746DFD000FAD0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902065C51E746DFD000FAD0E /* GoogleService-Info.plist */; };
 		9025FA151E54E8DE008C62E8 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025FA141E54E8DE008C62E8 /* VideoVC.swift */; };
 		9025FA171E54EBB7008C62E8 /* OverwatchVid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		06ADA5E8B03FE83620CEA3CA /* Pods-Overwatch United.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch United.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch United/Pods-Overwatch United.debug.xcconfig"; sourceTree = "<group>"; };
 		8ADED26EE59092744C8A23FE /* Pods-Overwatch United.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch United.release.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch United/Pods-Overwatch United.release.xcconfig"; sourceTree = "<group>"; };
+		90140DAD1E7DD0BD0045AAAA /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		902065C51E746DFD000FAD0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9025FA141E54E8DE008C62E8 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverwatchVid.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		90140DAC1E7DD0A00045AAAA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				90140DAD1E7DD0BD0045AAAA /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		901F61471E562AA400B08247 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +236,7 @@
 		90B697D61E53D655008D0453 /* Overwatch United */ = {
 			isa = PBXGroup;
 			children = (
+				90140DAC1E7DD0A00045AAAA /* Services */,
 				90B77F911E75CC3100FE6CD9 /* Overwatch United.entitlements */,
 				90030A871E70A6C50072B141 /* Resources */,
 				901F61491E562AC000B08247 /* Controller */,
@@ -480,6 +491,7 @@
 				908383C31E71A1E000DB32E8 /* HeroVC.swift in Sources */,
 				90B77F901E75BED600FE6CD9 /* View.swift in Sources */,
 				9041D1CA1E54E34E00E5DE7C /* VideoCell.swift in Sources */,
+				90140DAE1E7DD0BD0045AAAA /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

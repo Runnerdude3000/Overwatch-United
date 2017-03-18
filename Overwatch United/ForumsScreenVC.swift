@@ -18,8 +18,7 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-
-
+        
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton)

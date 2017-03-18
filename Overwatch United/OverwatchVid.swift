@@ -14,15 +14,18 @@ class OverwatchVid
     private var _videoURL: String!
     private var _videoTitle: String!
     
-    var imageURL: String {
+    var imageURL: String
+    {
         return _imageURL
     }
     
-    var videoURL: String {
+    var videoURL: String
+    {
         return _videoURL
     }
     
-    var videoTitle: String {
+    var videoTitle: String
+    {
         return _videoTitle
     }
     
