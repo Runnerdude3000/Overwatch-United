@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90140DAE1E7DD0BD0045AAAA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90140DAD1E7DD0BD0045AAAA /* DataService.swift */; };
+		90140DB01E7DF8450045AAAA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90140DAF1E7DF8450045AAAA /* Post.swift */; };
 		902065C61E746DFD000FAD0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902065C51E746DFD000FAD0E /* GoogleService-Info.plist */; };
 		9025FA151E54E8DE008C62E8 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025FA141E54E8DE008C62E8 /* VideoVC.swift */; };
 		9025FA171E54EBB7008C62E8 /* OverwatchVid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */; };
@@ -66,6 +67,7 @@
 		06ADA5E8B03FE83620CEA3CA /* Pods-Overwatch United.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch United.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch United/Pods-Overwatch United.debug.xcconfig"; sourceTree = "<group>"; };
 		8ADED26EE59092744C8A23FE /* Pods-Overwatch United.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch United.release.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch United/Pods-Overwatch United.release.xcconfig"; sourceTree = "<group>"; };
 		90140DAD1E7DD0BD0045AAAA /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		90140DAF1E7DF8450045AAAA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		902065C51E746DFD000FAD0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9025FA141E54E8DE008C62E8 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverwatchVid.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */,
 				908C87021E71AC89001B348A /* Hero.swift */,
+				90140DAF1E7DF8450045AAAA /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				90B697DA1E53D655008D0453 /* LoginScreenVC.swift in Sources */,
 				90B697E01E53D655008D0453 /* Overwatch_United.xcdatamodeld in Sources */,
 				90ED157C1E78597F000FCC0D /* CircleImageView.swift in Sources */,
+				90140DB01E7DF8450045AAAA /* Post.swift in Sources */,
 				908C87031E71AC89001B348A /* Hero.swift in Sources */,
 				9025FA171E54EBB7008C62E8 /* OverwatchVid.swift in Sources */,
 				90ED157A1E784DDE000FCC0D /* ForumsScreenVC.swift in Sources */,

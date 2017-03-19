@@ -411,7 +411,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Heroes!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gt-G3-9aE">
-                                        <rect key="frame" x="111.5" y="34" width="152.5" height="25"/>
+                                        <rect key="frame" x="112" y="33.5" width="152.5" height="25"/>
                                         <fontDescription key="fontDescription" name="Koverwatch" family="Koverwatch" pointSize="25"/>
                                         <color key="textColor" red="1" green="0.73268943070000003" blue="0.021655552200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -539,7 +539,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wco-dY-HJn">
-                                        <rect key="frame" x="173" y="34" width="29" height="25"/>
+                                        <rect key="frame" x="173" y="33.5" width="29" height="25"/>
                                         <fontDescription key="fontDescription" name="Koverwatch" family="Koverwatch" pointSize="25"/>
                                         <color key="textColor" red="1" green="0.70875297770000001" blue="0.12673356620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -846,7 +846,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forums" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJV-v5-GVq">
-                                        <rect key="frame" x="165.5" y="37" width="44" height="19"/>
+                                        <rect key="frame" x="166" y="36.5" width="44" height="19"/>
                                         <fontDescription key="fontDescription" name="Koverwatch" family="Koverwatch" pointSize="19"/>
                                         <color key="textColor" red="0.97666758300000001" green="0.57886129620000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -866,13 +866,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pM4-Mz-WSw" customClass="View" customModule="Overwatch_United" customModuleProvider="target">
                                 <rect key="frame" x="16" y="107" width="343" height="62"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="IPa-6h-Uyd" customClass="CircleImageView" customModule="Overwatch_United" customModuleProvider="target">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="IPa-6h-Uyd" customClass="CircleImageView" customModule="Overwatch_United" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="46" height="46"/>
                                         <color key="backgroundColor" red="0.17025443909999999" green="0.2252506316" blue="0.33315461870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="0RY-ZN-iYr"/>
                                             <constraint firstAttribute="width" constant="46" id="XkX-BU-OZJ"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Tkk-eb-a43" appends="YES" id="fPq-h1-w2E"/>
+                                        </connections>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a post!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Lk-kH-ad9">
                                         <rect key="frame" x="62" y="16" width="219" height="30"/>
@@ -1032,10 +1036,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageAdd" destination="IPa-6h-Uyd" id="sDz-nX-vDG"/>
                         <outlet property="tableView" destination="VFK-CW-JJn" id="JQO-Og-lDQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1TJ-zF-mpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Tkk-eb-a43">
+                    <connections>
+                        <action selector="addImageTapped:" destination="htw-UC-IXs" id="HzL-zd-CI6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="745" y="855"/>
         </scene>

@@ -83,7 +83,7 @@ class LoginScreenVC: UIViewController
                 if let user = user
                 {
                     let userData = ["provider": credential.provider]
-                    self.completeSignIn(id: user.uid, userData: userData)
+                    self.completeSignIn(user.uid, userData)
                 }
                
                 
@@ -102,7 +102,7 @@ class LoginScreenVC: UIViewController
                     if let user = user
                     {
                         let userData = ["provider": user.providerID]
-                        self.completeSignIn(id: user.uid, userData: userData)
+                        self.completeSignIn(user.uid, userData)
                     }
                 }
                 else
@@ -118,7 +118,7 @@ class LoginScreenVC: UIViewController
                             if let user = user
                             {
                                 let userData = ["provider": user.providerID]
-                                self.completeSignIn(id: user.uid, userData: userData)
+                                self.completeSignIn(user.uid, userData)
                             }
                             
                         }
@@ -128,7 +128,7 @@ class LoginScreenVC: UIViewController
         }
     }
     
-    func completeSignIn(id: String, userData: Dictionary<String, String>)
+    func completeSignIn(_ id: String, _ userData: Dictionary<String, String>)
     {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         KeychainWrapper.standard.set(id, forKey: KEY_UID)
