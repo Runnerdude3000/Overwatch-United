@@ -17,6 +17,7 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     
     override func viewDidLoad()
@@ -70,7 +71,15 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ForumsCell") as? ForumsCell
         {
-            cell.configureCell(post: post)
+            if let image = ForumsScreenVC.imageCache.object(forKey: post.imageURL as NSString)
+            {
+                cell.configureCell(post: post, image: image)
+            }
+            else
+            {
+                cell.configureCell(post: post)
+                return cell
+            }
             return cell
         }
         else
@@ -92,7 +101,4 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         present(imagePicker, animated: true, completion: nil)
     }
-    
-    
-
 }

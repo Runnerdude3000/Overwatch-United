@@ -8,16 +8,22 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseStorage
 
 let DB_BASE = FIRDatabase.database().reference() //contains URL of the root of the Database: grabbed from Plist
+let STORAGE_BASE = FIRStorage.storage().reference() //contains base URL for storage
 
 class DataService
 {
     static let ds = DataService() //Creates singleton class: static, globally accessible
     
+    // DB references
     private var _REF_BASE = DB_BASE
     private var _REF_POSTS = DB_BASE.child("posts") //contains base URL /posts
     private var _REF_USERS = DB_BASE.child("Users") //contains base URL /Users
+    
+    // Storage references
+    private var _STORAGE_IMG_POSTS = STORAGE_BASE.child("post-pics") //contains /post-pics/
     
     var REF_BASE: FIRDatabaseReference
     {
@@ -32,6 +38,11 @@ class DataService
     var REF_USERS: FIRDatabaseReference
     {
         return _REF_USERS
+    }
+    
+    var STORAGE_IMG_POSTS: FIRStorageReference
+    {
+        return _STORAGE_IMG_POSTS
     }
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>)

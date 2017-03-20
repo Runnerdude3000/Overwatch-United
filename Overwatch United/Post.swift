@@ -60,10 +60,5 @@ class Post
         {
             self._likes = likes
         }
-    }
-    
-    
-    
-    
-    
+    }  
 }
