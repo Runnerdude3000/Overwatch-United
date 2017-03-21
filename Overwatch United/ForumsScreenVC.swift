@@ -14,6 +14,8 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: UIImageView!
+    @IBOutlet weak var captionField: UITextField!
+    var imageSelected = false
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
@@ -93,6 +95,7 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage
         {
             imageAdd.image = image
+            imageSelected = true
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
@@ -101,4 +104,67 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func postButtonPressed(_ sender: UIButton)
+    {
+        guard let caption = captionField.text, caption != "" else
+        {
+            print("Caption must be entered")
+            return
+        }
+        guard let image = imageAdd.image, imageSelected == true else
+        {
+            print("An image must be selected")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(image, 0.2)
+        {
+            let imageUid = NSUUID().uuidString
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/png"
+            
+            DataService.ds.STORAGE_IMG_POSTS.child(imageUid).put(imageData, metadata: metaData) { (metaData, error) in
+                if error != nil
+                {
+                    print("Unable to upload image to Firebase storage")
+                }
+                else
+                {
+                    print("Successfully uploaded image to Firebase storage")
+                    let downloadURL = metaData?.downloadURL()?.absoluteString
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

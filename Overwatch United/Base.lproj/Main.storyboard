@@ -892,6 +892,9 @@
                                             <constraint firstAttribute="width" constant="46" id="xph-de-gFK"/>
                                         </constraints>
                                         <state key="normal" image="add-post"/>
+                                        <connections>
+                                            <action selector="postButtonPressed:" destination="htw-UC-IXs" eventType="touchUpInside" id="qCq-gp-H7u"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.53500801320000002" green="0.59367674589999997" blue="0.7265613675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1036,6 +1039,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="captionField" destination="7Lk-kH-ad9" id="qVK-xM-BFP"/>
                         <outlet property="imageAdd" destination="IPa-6h-Uyd" id="sDz-nX-vDG"/>
                         <outlet property="tableView" destination="VFK-CW-JJn" id="JQO-Og-lDQ"/>
                     </connections>
