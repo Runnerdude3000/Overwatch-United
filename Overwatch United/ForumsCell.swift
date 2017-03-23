@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseStorage
+import FirebaseDatabase
 
 class ForumsCell: UITableViewCell
 {
@@ -16,12 +17,19 @@ class ForumsCell: UITableViewCell
     @IBOutlet weak var postImg: UIImageView!
     @IBOutlet weak var caption: UITextView!
     @IBOutlet weak var likesLbl: UILabel!
+    @IBOutlet weak var likeImg: UIImageView!
     
     var post: Post!
+    var likesref: FIRDatabaseReference!
     
     override func awakeFromNib()
     {
         super.awakeFromNib()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likePressed))
+        tap.numberOfTapsRequired = 1
+        likeImg.addGestureRecognizer(tap)
+        likeImg.isUserInteractionEnabled = true
 
     }
 
@@ -57,5 +65,39 @@ class ForumsCell: UITableViewCell
                 }
             })
         }
+        
+        likesref = DataService.ds.REF_USER_CURRENT.child("likes").child(self.post.postID)
+        likesref.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull
+            {
+                self.likeImg.image = UIImage(named: "empty-heart")
+            }
+            else
+            {
+                self.likeImg.image = UIImage(named: "filled-heart")
+            }
+        })
     }
+    
+    func likePressed(_ sender: UITapGestureRecognizer)
+    {
+        likesref = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postID)
+        likesref.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull
+            {
+                self.likeImg.image = UIImage(named: "filled-heart")
+                self.post.adjustLikes(addLike: true)
+                self.likesref.setValue(true)
+            }
+            else
+            {
+                self.likeImg.image = UIImage(named: "empty-heart")
+                self.post.adjustLikes(addLike: false)
+                self.likesref.removeValue()
+            }
+        })
+    }
+    
+    
+    
 }

@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseDatabase
 import FirebaseStorage
+import SwiftKeychainWrapper
 
 let DB_BASE = FIRDatabase.database().reference() //contains URL of the root of the Database: grabbed from Plist
 let STORAGE_BASE = FIRStorage.storage().reference() //contains base URL for storage
@@ -40,10 +41,23 @@ class DataService
         return _REF_USERS
     }
     
+    var REF_USER_CURRENT: FIRDatabaseReference
+    {
+        let uid = KeychainWrapper.standard.string(forKey: KEY_UID)
+        if let userRef = uid
+        {
+            let userRef = REF_USERS.child(userRef)
+            return userRef
+        }
+        return FIRDatabaseReference()
+    }
+    
     var STORAGE_IMG_POSTS: FIRStorageReference
     {
         return _STORAGE_IMG_POSTS
     }
+    
+    
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>)
     {

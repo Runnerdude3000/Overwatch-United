@@ -34,6 +34,9 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //Pulls data from database -> posts entity
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+            self.posts = [] //clears out array each time it is loaded from firebase. This fixes the duplication likes issue
+            
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]
             {
                 for snap in snapshot
@@ -80,7 +83,7 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             else
             {
                 cell.configureCell(post: post)
-                return cell
+                //return cell
             }
             return cell
         }
@@ -162,29 +165,3 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         imageAdd.image = UIImage(named: "add-image")
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
