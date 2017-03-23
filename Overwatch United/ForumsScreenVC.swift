@@ -133,15 +133,35 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 {
                     print("Successfully uploaded image to Firebase storage")
                     let downloadURL = metaData?.downloadURL()?.absoluteString
+                    
+                    if let url = downloadURL
+                    {
+                        self.postToFirebase(imgURL: url)
+                    }
                 }
             }
         }
     }
+    
+    func postToFirebase(imgURL: String)
+    {
+        let post: Dictionary<String, AnyObject> =
+        [
+            "caption" : captionField.text as AnyObject,
+            "imageUrl" : imgURL as AnyObject,
+            "likes" : 0 as AnyObject
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        tableView.reloadData()
+        
+        captionField.text = ""
+        imageSelected = false
+        imageAdd.image = UIImage(named: "add-image")
+    }
 }
-
-
-
-
 
 
 
