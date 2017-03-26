@@ -17,17 +17,13 @@ class HeroCell: UICollectionViewCell
    
     var hero: Hero!
     
-    required init?(coder aDecoder: NSCoder)
-    {
-        super.init(coder: aDecoder)
-        layer.cornerRadius = 5.0
-    }
-    
     func configureCell(_ hero: Hero)
     {
+        print("CONFIGURE CELL ENTERED")
         self.hero = hero
         
         cellLabel.text = self.hero.name.capitalized
-        cellImage.image = UIImage(named: String(self.hero.heroID))
+        print(hero.name)
+        cellImage.image = UIImage(named: String(self.hero.name.capitalized))
     }
 }

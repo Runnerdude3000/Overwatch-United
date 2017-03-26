@@ -40,7 +40,4 @@ class VideoVC: UIViewController
     {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-
 }

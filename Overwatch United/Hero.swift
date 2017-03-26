@@ -17,13 +17,13 @@ class Hero
     private var _health: String!
     private var _armour: String!
     private var _shield: String!
-    private var _heroID: Int!
     private var _heroURL: String!
     private var _difficulty: String!
+    private var _image: UIImage!
     
     var name: String
     {
-       return _name
+       return _name ?? ""
     }
     
     var description: String
@@ -46,9 +46,9 @@ class Hero
         return _shield ?? ""
     }
     
-    var heroID: Int
+    var difficulty: String
     {
-        return _heroID
+        return _difficulty ?? ""
     }
     
     var heroURL: String
@@ -56,61 +56,61 @@ class Hero
         return _heroURL ?? ""
     }
     
-    var difficulty: String
+    var image: UIImage
     {
-        return _difficulty ?? ""
+        return _image
     }
-    
-    init(name: String, heroID: Int)
+
+    init(name: String, image: UIImage? = nil)
     {
         self._name = name
-        
-        self._heroID = heroID
-        
-        self._heroURL = "\(URL_BASE)\(URL_HERO)\(self._heroID)"
-        
-//        var i = 0
-//        repeat
-//        {
-//            i += 1
-//            self._heroURL = "\(URL_BASE)\(URL_HERO)\(i)"
-//        }
-//        while i < 24
-        
+        self._image = image
+        self._heroURL = String(HERO_INFO_URL)
     }
     
     func downloadHeroDetails(completed: @escaping DownloadComplete)
     {
-        print("download via alamo function entered")
+        print("YO BRO, DOWNLOAD STARTED: download via alamo function entered")
         Alamofire.request(_heroURL).responseJSON
         {
             (response) in
             if let dict = response.result.value as? Dictionary<String, AnyObject>
             {
-                if let description = dict["description"] as? String
+                if let data = dict["data"] as? [Dictionary<String, AnyObject>], data.count > 0
                 {
-                    self._description = description
-                }
-                
-                if let health = dict["health"] as? Int
-                {
-                    self._health = String(health)
-                }
-                
-                if let armour = dict["armour"] as? Int
-                {
-                    self._armour = String(armour)
-                }
-                
-                if let shield = dict["shield"] as? Int
-                {
-                    self._shield = String(shield)
+                    if data.count > 0
+                    {
+                        for i in 0..<data.count
+                        {
+                            if let name = data[i]["name"] as? String
+                            {
+                                self._name = name
+                            }
+                            if let description = data[i]["description"] as? String
+                            {
+                                self._description = description
+                            }
+                            if let health = data[i]["health"] as? Int
+                            {
+                                self._health = String(health)
+                            }
+                            if let armour = data[i]["armour"] as? Int
+                            {
+                                self._armour = String(armour)
+                            }
+                            if let shield = data[i]["shield"] as? Int
+                            {
+                                self._shield = String(shield)
+                            }
+                            if let difficulty = data[i]["difficulty"] as? Int
+                            {
+                                self._difficulty = String(difficulty)
+                            }
+                        }
+                    }
                 }
             }
             completed()
         }
     }
 }
-
-
-

@@ -15,6 +15,8 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: UIImageView!
     @IBOutlet weak var captionField: UITextField!
+    @IBOutlet weak var profilePicAdd: UIImageView!
+    
     var imageSelected = false
     
     var posts = [Post]()
@@ -27,6 +29,7 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        //tableView.insertRows(at: [IndexPath.init(row: 0, section: 0)], with: .automatic)
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -37,6 +40,7 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             self.posts = [] //clears out array each time it is loaded from firebase. This fixes the duplication likes issue
             
+            
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]
             {
                 for snap in snapshot
@@ -46,13 +50,12 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                     {
                         let key = snap.key
                         let post = Post(postID: key, postData: postDict)
-                        self.posts.append(post)
+                        self.posts.insert(post, at: 0)
                     }
                 }
             }
             self.tableView.reloadData()
         })
-        
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton)
@@ -72,6 +75,7 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
+        
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ForumsCell") as? ForumsCell
@@ -83,7 +87,6 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             else
             {
                 cell.configureCell(post: post)
-                //return cell
             }
             return cell
         }
@@ -91,7 +94,38 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         {
             return ForumsCell()
         }
+
+//        if let cell = tableView.dequeueReusableCell(withIdentifier: "ForumsCell") as? ForumsCell
+//        {
+//            if let image = ForumsScreenVC.imageCache.object(forKey: post.imageURL as NSString), let profImage = ForumsScreenVC.imageCache.object(forKey: post.profileImageURL as NSString)
+//            {
+//                cell.configureCell(post: post, image: image, profileImage: profImage)
+//            }
+//            else
+//            {
+//                cell.configureCell(post: post)
+//            }
+//            return cell
+//        }
+//        else
+//        {
+//            return ForumsCell()
+//        }
     }
+    
+//    func profileImagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+//    {
+//        if let image = info[UIImagePickerControllerEditedImage] as? UIImage
+//        {
+//            profilePicAdd.image = image
+//            imageSelected = true
+//        }
+//        imagePicker.dismiss(animated: true, completion: nil)
+//    }
+//    @IBAction func addProfilePicPressed(_ sender: UIButton)
+//    {
+//        present(imagePicker, animated: true, completion: nil)
+//    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
@@ -115,19 +149,72 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("Caption must be entered")
             return
         }
-        guard let image = imageAdd.image, imageSelected == true else
-        {
-            print("An image must be selected")
-            return
-        }
         
-        if let imageData = UIImageJPEGRepresentation(image, 0.2)
+        setImageData()
+//        guard let image = imageAdd.image, imageSelected == true else
+//        {
+//            print("An image must be selected")
+//            return
+//        }
+        //UPLOADS Profile Pic data to Firebase
+        //====================================
+        
+//        if let imageData = UIImageJPEGRepresentation(imageAdd.image!, 0.2)
+//        {
+//            let imageUid = NSUUID().uuidString
+//            let metaData = FIRStorageMetadata()
+//            metaData.contentType = "image/png"
+//            
+//            DataService.ds.STORAGE_IMG_POSTS.child(imageUid).put(imageData, metadata: metaData) { (metaData, error) in
+//                if error != nil
+//                {
+//                    print("Unable to upload image to Firebase storage")
+//                }
+//                else
+//                {
+//                    print("Successfully uploaded image to Firebase storage")
+//                    let downloadURL = metaData?.downloadURL()?.absoluteString
+//                    
+//                    if let url = downloadURL
+//                    {
+//                        self.postToFirebase(imgURL: url)
+//                    }
+//                }
+//            }
+//        }
+    }
+    
+    func setImageData()
+    {
+        if let imageData = UIImageJPEGRepresentation(imageAdd.image!, 0.2)/*, let profImageData = UIImageJPEGRepresentation(profilePicAdd.image!, 0.2) */
         {
             let imageUid = NSUUID().uuidString
             let metaData = FIRStorageMetadata()
             metaData.contentType = "image/png"
             
-            DataService.ds.STORAGE_IMG_POSTS.child(imageUid).put(imageData, metadata: metaData) { (metaData, error) in
+//            DataService.ds.STORAGE_IMG_POSTS.child(imageUid).put(profImageData, metadata: metaData)
+//            { (metaData, error)
+//                in
+//                if error != nil
+//                {
+//                    print("Unable to upload image to Firebase storage")
+//                }
+//                else
+//                {
+//                    print("Successfully uploaded image to Firebase storage")
+//                    let downloadURL = metaData?.downloadURL()?.absoluteString
+//                    
+//                    if let url = downloadURL
+//                    {
+//                        self.postProfPicToFirebase(imgURL: url)
+//                    }
+//                }
+//
+//            }
+            
+            DataService.ds.STORAGE_IMG_POSTS.child(imageUid).put(imageData, metadata: metaData)
+            { (metaData, error)
+                in
                 if error != nil
                 {
                     print("Unable to upload image to Firebase storage")
@@ -136,7 +223,7 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 {
                     print("Successfully uploaded image to Firebase storage")
                     let downloadURL = metaData?.downloadURL()?.absoluteString
-                    
+                
                     if let url = downloadURL
                     {
                         self.postToFirebase(imgURL: url)
@@ -164,4 +251,25 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         imageSelected = false
         imageAdd.image = UIImage(named: "add-image")
     }
+    
+//    func postProfPicToFirebase(imgURL: String)
+//    {
+//        let post: Dictionary<String, AnyObject> =
+//            [
+//                "caption" : captionField.text as AnyObject,
+//                "profilePic" : imgURL as AnyObject,
+//                "likes" : 0 as AnyObject
+//        ]
+//        
+//        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+//        firebasePost.setValue(post)
+//        
+//        tableView.reloadData()
+//        
+//        captionField.text = ""
+//        imageSelected = false
+//        profilePicAdd.image = UIImage(named: "add-image")
+//    }
+
+
 }

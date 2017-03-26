@@ -10,9 +10,7 @@ import UIKit
 
 typealias DownloadComplete = () -> ()
 
-let URL_BASE = "https://overwatch-api.net/"
-
-let URL_HERO = "api/v1/hero"
+let HERO_INFO_URL = "https://overwatch-api.net/api/v1/hero"
 
 
 let SHADOW_GRAY: CGFloat = 120.0 / 255.0

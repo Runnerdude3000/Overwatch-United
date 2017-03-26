@@ -15,6 +15,8 @@ class Post
     private var _imageURL: String!
     private var _likes: Int!
     private var _postID: String!
+    private var _userName: String!
+    private var _profileImageURL: String!
     private var _postRef: FIRDatabaseReference!
     
     var caption: String
@@ -22,10 +24,20 @@ class Post
         return _caption
     }
     
+//    var userName: String
+//    {
+//        return _userName
+//    }
+    
     var imageURL: String
     {
         return _imageURL
     }
+    
+//    var profileImageURL: String
+//    {
+//        return _profileImageURL
+//    }
     
     var likes: Int
     {
@@ -38,11 +50,12 @@ class Post
     }
     
     
-    init(caption: String, imageURL: String, likes: Int)
+    init(caption: String, imageURL: String, profileImageURL: String, likes: Int)
     {
         self._caption = caption
         self._imageURL = imageURL
         self._likes = likes
+        //self._profileImageURL = profileImageURL
     }
     
     init(postID: String, postData: Dictionary<String, AnyObject>)
@@ -58,6 +71,11 @@ class Post
         {
             self._imageURL = imageURL
         }
+        
+//        if let profileImageURL = postData["profilePic"] as? String
+//        {
+//            self._profileImageURL = profileImageURL
+//        }
         
         if let likes = postData["likes"] as? Int
         {
