@@ -179,6 +179,8 @@
 		901F61481E562AAA00B08247 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				90B697DB1E53D655008D0453 /* Main.storyboard */,
+				90B697E31E53D655008D0453 /* LaunchScreen.storyboard */,
 				9041D1C91E54E34E00E5DE7C /* VideoCell.swift */,
 				908C87091E71BEEA001B348A /* HeroCell.swift */,
 				90B77F8D1E75BB0000FE6CD9 /* ButtonView.swift */,
@@ -243,9 +245,7 @@
 				901F61481E562AAA00B08247 /* View */,
 				901F61471E562AA400B08247 /* Model */,
 				90B697D71E53D655008D0453 /* AppDelegate.swift */,
-				90B697DB1E53D655008D0453 /* Main.storyboard */,
 				90B697E11E53D655008D0453 /* Assets.xcassets */,
-				90B697E31E53D655008D0453 /* LaunchScreen.storyboard */,
 				90B697E61E53D655008D0453 /* Info.plist */,
 				902065C51E746DFD000FAD0E /* GoogleService-Info.plist */,
 				90B697DE1E53D655008D0453 /* Overwatch_United.xcdatamodeld */,

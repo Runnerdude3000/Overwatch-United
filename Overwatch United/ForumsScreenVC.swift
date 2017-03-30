@@ -9,9 +9,8 @@
 import UIKit
 import Firebase
 
-class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+class ForumsScreenVC: UIViewController
 {
-
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: UIImageView!
     @IBOutlet weak var captionField: UITextField!
@@ -37,10 +36,7 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //Pulls data from database -> posts entity
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
-            
-            self.posts = [] //clears out array each time it is loaded from firebase. This fixes the duplication likes issue
-            
-            
+            self.posts = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]
             {
                 for snap in snapshot
@@ -63,80 +59,6 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         dismiss(animated: true, completion: nil)
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int
-    {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return posts.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        
-        let post = posts[indexPath.row]
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ForumsCell") as? ForumsCell
-        {
-            if let image = ForumsScreenVC.imageCache.object(forKey: post.imageURL as NSString)
-            {
-                cell.configureCell(post: post, image: image)
-            }
-            else
-            {
-                cell.configureCell(post: post)
-            }
-            return cell
-        }
-        else
-        {
-            return ForumsCell()
-        }
-
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: "ForumsCell") as? ForumsCell
-//        {
-//            if let image = ForumsScreenVC.imageCache.object(forKey: post.imageURL as NSString), let profImage = ForumsScreenVC.imageCache.object(forKey: post.profileImageURL as NSString)
-//            {
-//                cell.configureCell(post: post, image: image, profileImage: profImage)
-//            }
-//            else
-//            {
-//                cell.configureCell(post: post)
-//            }
-//            return cell
-//        }
-//        else
-//        {
-//            return ForumsCell()
-//        }
-    }
-    
-//    func profileImagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
-//    {
-//        if let image = info[UIImagePickerControllerEditedImage] as? UIImage
-//        {
-//            profilePicAdd.image = image
-//            imageSelected = true
-//        }
-//        imagePicker.dismiss(animated: true, completion: nil)
-//    }
-//    @IBAction func addProfilePicPressed(_ sender: UIButton)
-//    {
-//        present(imagePicker, animated: true, completion: nil)
-//    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
-    {
-        if let image = info[UIImagePickerControllerEditedImage] as? UIImage
-        {
-            imageAdd.image = image
-            imageSelected = true
-        }
-        imagePicker.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func addImageTapped(_ sender: Any)
     {
         present(imagePicker, animated: true, completion: nil)
@@ -155,32 +77,6 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        {
 //            print("An image must be selected")
 //            return
-//        }
-        //UPLOADS Profile Pic data to Firebase
-        //====================================
-        
-//        if let imageData = UIImageJPEGRepresentation(imageAdd.image!, 0.2)
-//        {
-//            let imageUid = NSUUID().uuidString
-//            let metaData = FIRStorageMetadata()
-//            metaData.contentType = "image/png"
-//            
-//            DataService.ds.STORAGE_IMG_POSTS.child(imageUid).put(imageData, metadata: metaData) { (metaData, error) in
-//                if error != nil
-//                {
-//                    print("Unable to upload image to Firebase storage")
-//                }
-//                else
-//                {
-//                    print("Successfully uploaded image to Firebase storage")
-//                    let downloadURL = metaData?.downloadURL()?.absoluteString
-//                    
-//                    if let url = downloadURL
-//                    {
-//                        self.postToFirebase(imgURL: url)
-//                    }
-//                }
-//            }
 //        }
     }
     
@@ -270,6 +166,58 @@ class ForumsScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        imageSelected = false
 //        profilePicAdd.image = UIImage(named: "add-image")
 //    }
+}
 
+extension ForumsScreenVC: UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        
+        let post = posts[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ForumsCell") as? ForumsCell
+        {
+            if let image = ForumsScreenVC.imageCache.object(forKey: post.imageURL as NSString)
+            {
+                cell.configureCell(post: post, image: image)
+            }
+            else
+            {
+                cell.configureCell(post: post)
+            }
+            return cell
+        }
+        else
+        {
+            return ForumsCell()
+        }
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage
+        {
+            imageAdd.image = image
+            imageSelected = true
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
 
 }
+
+
+
+
+
+
+

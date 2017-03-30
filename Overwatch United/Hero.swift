@@ -20,6 +20,12 @@ class Hero
     private var _heroURL: String!
     private var _difficulty: String!
     private var _image: UIImage!
+    private var _heroID: Int!
+    
+    var heroID: Int
+    {
+        return _heroID
+    }
     
     var name: String
     {
@@ -61,15 +67,17 @@ class Hero
         return _image
     }
 
-    init(name: String, image: UIImage? = nil)
+    init(name: String, heroID: Int, image: UIImage? = nil)
     {
         self._name = name
+        self._heroID = heroID
         self._image = image
         self._heroURL = String(HERO_INFO_URL)
     }
     
     func downloadHeroDetails(completed: @escaping DownloadComplete)
     {
+        //NOTE: Edit to grab and match each hero individually. This is gathering all data, but goes to the last hero.
         print("YO BRO, DOWNLOAD STARTED: download via alamo function entered")
         Alamofire.request(_heroURL).responseJSON
         {

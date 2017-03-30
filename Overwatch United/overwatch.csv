@@ -5,7 +5,7 @@ id,name
 4,genji
 5,hanzo
 6,junkrat
-7,lúcio
+7,lucio
 8,mccree
 9,mei
 10,mercy
@@ -15,10 +15,11 @@ id,name
 14,roadhog
 15,soldier: 76
 16,symmetra
-17,torbjörn
+17,torbjorn
 18,tracer
 19,widowmaker
 20,winston
 21,zarya
 22,zenyatta
 23,sombra
+24,orisa
