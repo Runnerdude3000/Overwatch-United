@@ -12,6 +12,7 @@ class VideoCell: UITableViewCell
 {
     @IBOutlet weak var videoImage: UIImageView!
     @IBOutlet weak var videoTitle: UILabel!
+    
 
     override func awakeFromNib()
     {
@@ -25,26 +26,10 @@ class VideoCell: UITableViewCell
     }
     
     //to update table cell upon refresh
-    func updateCellUI(video: OverwatchVid)
+    func updateCellUI(video: Video)
     {
         videoTitle.text = video.videoTitle
         
-        let imURL = URL(string: video.imageURL)!
         
-        DispatchQueue.global().async
-        {
-            do
-            {
-                let data = try Data(contentsOf: imURL)
-                DispatchQueue.global().sync
-                {
-                    self.videoImage.image = UIImage(data: data)
-                }
-            }
-            catch
-            {
-                    //handle the error
-            }
-        }
     }
 }

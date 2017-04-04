@@ -35,12 +35,13 @@ class HeroDetailsVC: UIViewController
     func updateHeroUI()
     {
         heroName.text = hero.name
-        heroImage.image = UIImage(named: hero.name)
+        heroImage.image = UIImage(named: String(hero.heroID))
         difficulty.text = hero.difficulty
         health.text = hero.health
         armour.text = hero.armour
         shield.text = hero.shield
         heroDescription.text = hero.description
+        rollImage.image = UIImage(named: hero.roll)
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton)

@@ -14,9 +14,9 @@ class VideoVC: UIViewController
     @IBOutlet weak var videoView: UIWebView!
     @IBOutlet weak var videoTitle: UILabel!
     
-    private var _video: OverwatchVid!
+    private var _video: Video!
     
-    var video: OverwatchVid
+    var video: Video
     {
         get
         {
@@ -33,7 +33,7 @@ class VideoVC: UIViewController
         super.viewDidLoad()
         
         videoTitle.text = video.videoTitle
-        videoView.loadHTMLString(video.videoURL, baseURL: nil)
+        //videoView.loadHTMLString(video.videoURL, baseURL: nil)
     }
 
     @IBAction func backButtonPressed(_ sender: UIButton)

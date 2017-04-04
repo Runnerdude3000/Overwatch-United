@@ -55,7 +55,7 @@ class LoginScreenVC: UIViewController
         { (result, error) in
             if error != nil
             {
-                print("ERROR: Unable to authenticate with Facebook - \(error)")
+                print("ERROR: Unable to authenticate with Facebook - \(String(describing: error))")
             }
             else if result?.isCancelled == true
             {
@@ -75,7 +75,7 @@ class LoginScreenVC: UIViewController
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             if error != nil
             {
-                print("ERROR: Unable to authenticate with Firebase - \(error)")
+                print("ERROR: Unable to authenticate with Firebase - \(String(describing: error))")
             }
             else
             {

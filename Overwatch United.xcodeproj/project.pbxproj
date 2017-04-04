@@ -11,11 +11,11 @@
 		90140DB01E7DF8450045AAAA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90140DAF1E7DF8450045AAAA /* Post.swift */; };
 		902065C61E746DFD000FAD0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902065C51E746DFD000FAD0E /* GoogleService-Info.plist */; };
 		9025FA151E54E8DE008C62E8 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025FA141E54E8DE008C62E8 /* VideoVC.swift */; };
-		9025FA171E54EBB7008C62E8 /* OverwatchVid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */; };
 		9041D1CA1E54E34E00E5DE7C /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9041D1C91E54E34E00E5DE7C /* VideoCell.swift */; };
 		908C87031E71AC89001B348A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87021E71AC89001B348A /* Hero.swift */; };
 		908C87061E71B0B8001B348A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87051E71B0B8001B348A /* Constants.swift */; };
 		908C870A1E71BEEA001B348A /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87091E71BEEA001B348A /* HeroCell.swift */; };
+		909D13DE1E93046100907399 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D13DD1E93046100907399 /* Video.swift */; };
 		90B697D81E53D655008D0453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B697D71E53D655008D0453 /* AppDelegate.swift */; };
 		90B697DA1E53D655008D0453 /* LoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B697D91E53D655008D0453 /* LoginScreenVC.swift */; };
 		90B697DD1E53D655008D0453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90B697DB1E53D655008D0453 /* Main.storyboard */; };
@@ -69,11 +69,11 @@
 		90140DAF1E7DF8450045AAAA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		902065C51E746DFD000FAD0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9025FA141E54E8DE008C62E8 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
-		9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverwatchVid.swift; sourceTree = "<group>"; };
 		9041D1C91E54E34E00E5DE7C /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		908C87021E71AC89001B348A /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		908C87051E71B0B8001B348A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		908C87091E71BEEA001B348A /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		909D13DD1E93046100907399 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		90B697D41E53D655008D0453 /* Overwatch United.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Overwatch United.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B697D71E53D655008D0453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90B697D91E53D655008D0453 /* LoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenVC.swift; sourceTree = "<group>"; };
@@ -169,9 +169,9 @@
 		901F61471E562AA400B08247 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9025FA161E54EBB7008C62E8 /* OverwatchVid.swift */,
 				908C87021E71AC89001B348A /* Hero.swift */,
 				90140DAF1E7DF8450045AAAA /* Post.swift */,
+				909D13DD1E93046100907399 /* Video.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -484,13 +484,13 @@
 				90ED157C1E78597F000FCC0D /* CircleImageView.swift in Sources */,
 				90140DB01E7DF8450045AAAA /* Post.swift in Sources */,
 				908C87031E71AC89001B348A /* Hero.swift in Sources */,
-				9025FA171E54EBB7008C62E8 /* OverwatchVid.swift in Sources */,
 				90ED157A1E784DDE000FCC0D /* ForumsScreenVC.swift in Sources */,
 				90B697D81E53D655008D0453 /* AppDelegate.swift in Sources */,
 				90C093741E885A92005C22D1 /* HeroDetailsVC.swift in Sources */,
 				90C093721E883B71005C22D1 /* HeroesScreenVC.swift in Sources */,
 				90B77F901E75BED600FE6CD9 /* View.swift in Sources */,
 				9041D1CA1E54E34E00E5DE7C /* VideoCell.swift in Sources */,
+				909D13DE1E93046100907399 /* Video.swift in Sources */,
 				90140DAE1E7DD0BD0045AAAA /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

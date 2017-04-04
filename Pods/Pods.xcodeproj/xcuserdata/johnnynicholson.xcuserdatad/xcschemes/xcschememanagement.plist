@@ -39,7 +39,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReactiveSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftKeychainWrapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YoutubeEngine.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,7 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1620C830EC108DA6860A242A179E6F77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3AEC019ACD04372FAD931E4E6F3BE3C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DE119A3B3BA354A8577AD52D55EC0D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,17 +102,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A36B6F69816A349005ECAA6367FB726</key>
+		<key>906374DEF5870A73175479F9CE654DA1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2452A229F384C411DDB09EDAB84D33F</key>
+		<key>B5FBBD63800DD4C1CFDA23AAD9BD81FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>BC5000D645EEAF961C85907CDC796FE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD39DA113F86483C3019078F06DCAC0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +132,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF32445158BD998E29F8A80B4126DD0F</key>
+		<key>EEFC4235F641768629B5BE8BF274D0E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

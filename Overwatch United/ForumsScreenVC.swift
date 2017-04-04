@@ -28,7 +28,6 @@ class ForumsScreenVC: UIViewController
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        //tableView.insertRows(at: [IndexPath.init(row: 0, section: 0)], with: .automatic)
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -88,26 +87,6 @@ class ForumsScreenVC: UIViewController
             let metaData = FIRStorageMetadata()
             metaData.contentType = "image/png"
             
-//            DataService.ds.STORAGE_IMG_POSTS.child(imageUid).put(profImageData, metadata: metaData)
-//            { (metaData, error)
-//                in
-//                if error != nil
-//                {
-//                    print("Unable to upload image to Firebase storage")
-//                }
-//                else
-//                {
-//                    print("Successfully uploaded image to Firebase storage")
-//                    let downloadURL = metaData?.downloadURL()?.absoluteString
-//                    
-//                    if let url = downloadURL
-//                    {
-//                        self.postProfPicToFirebase(imgURL: url)
-//                    }
-//                }
-//
-//            }
-            
             DataService.ds.STORAGE_IMG_POSTS.child(imageUid).put(imageData, metadata: metaData)
             { (metaData, error)
                 in
@@ -148,24 +127,10 @@ class ForumsScreenVC: UIViewController
         imageAdd.image = UIImage(named: "add-image")
     }
     
-//    func postProfPicToFirebase(imgURL: String)
-//    {
-//        let post: Dictionary<String, AnyObject> =
-//            [
-//                "caption" : captionField.text as AnyObject,
-//                "profilePic" : imgURL as AnyObject,
-//                "likes" : 0 as AnyObject
-//        ]
-//        
-//        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
-//        firebasePost.setValue(post)
-//        
-//        tableView.reloadData()
-//        
-//        captionField.text = ""
-//        imageSelected = false
-//        profilePicAdd.image = UIImage(named: "add-image")
-//    }
+    @IBAction func captionFieldEntered(_ sender: UITextField)
+    {
+        sender.resignFirstResponder()
+    }
 }
 
 extension ForumsScreenVC: UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate

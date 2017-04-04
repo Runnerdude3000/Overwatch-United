@@ -57,15 +57,8 @@ class DataService
         return _STORAGE_IMG_POSTS
     }
     
-    
-    
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>)
     {
         REF_USERS.child(uid).updateChildValues(userData) //Note: if this child of users does not exist, it will be created
-        
     }
-    
 }
-
-
-

@@ -22,7 +22,6 @@ class HeroCell: UICollectionViewCell
         print("CONFIGURE CELL ENTERED")
         self.hero = hero
         cellLabel.text = self.hero.name.capitalized
-        //print(hero.name)
-        cellImage.image = UIImage(named: self.hero.name.capitalized)
+        cellImage.image = UIImage(named: String(self.hero.heroID))
     }
 }

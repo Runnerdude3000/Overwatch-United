@@ -21,6 +21,7 @@ class Hero
     private var _difficulty: String!
     private var _image: UIImage!
     private var _heroID: Int!
+    private var _roll: String!
     
     var heroID: Int
     {
@@ -62,6 +63,11 @@ class Hero
         return _heroURL ?? ""
     }
     
+    var roll: String
+    {
+        return _roll ?? ""
+    }
+    
     var image: UIImage
     {
         return _image
@@ -72,7 +78,7 @@ class Hero
         self._name = name
         self._heroID = heroID
         self._image = image
-        self._heroURL = String(HERO_INFO_URL)
+        self._heroURL = String(HERO_INFO_URL) + String(self._heroID)
     }
     
     func downloadHeroDetails(completed: @escaping DownloadComplete)
@@ -84,37 +90,35 @@ class Hero
             (response) in
             if let dict = response.result.value as? Dictionary<String, AnyObject>
             {
-                if let data = dict["data"] as? [Dictionary<String, AnyObject>], data.count > 0
+                if let name = dict["name"] as? String
                 {
-                    if data.count > 0
+                    self._name = name
+                }
+                if let description = dict["description"] as? String
+                {
+                    self._description = description
+                }
+                if let health = dict["health"] as? Int
+                {
+                    self._health = String(health)
+                }
+                if let armour = dict["armour"] as? Int
+                {
+                    self._armour = String(armour)
+                }
+                if let shield = dict["shield"] as? Int
+                {
+                    self._shield = String(shield)
+                }
+                if let difficulty = dict["difficulty"] as? Int
+                {
+                    self._difficulty = String(difficulty)
+                }
+                if let subRoll = dict["role"] as? Dictionary<String, AnyObject>
+                {
+                    if let roll = subRoll["name"] as? String
                     {
-                        for i in 0..<data.count
-                        {
-                            if let name = data[i]["name"] as? String
-                            {
-                                self._name = name
-                            }
-                            if let description = data[i]["description"] as? String
-                            {
-                                self._description = description
-                            }
-                            if let health = data[i]["health"] as? Int
-                            {
-                                self._health = String(health)
-                            }
-                            if let armour = data[i]["armour"] as? Int
-                            {
-                                self._armour = String(armour)
-                            }
-                            if let shield = data[i]["shield"] as? Int
-                            {
-                                self._shield = String(shield)
-                            }
-                            if let difficulty = data[i]["difficulty"] as? Int
-                            {
-                                self._difficulty = String(difficulty)
-                            }
-                        }
+                        self._roll = roll
                     }
                 }
             }
@@ -122,3 +126,14 @@ class Hero
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -20,6 +20,7 @@ class ForumsCell: UITableViewCell
     
     var post: Post!
     var likesref: FIRDatabaseReference!
+    var deleteRef: FIRDatabaseReference!
     
     override func awakeFromNib()
     {
@@ -37,35 +38,6 @@ class ForumsCell: UITableViewCell
         self.post = post
         self.caption.text = post.caption
         self.likesLbl.text = String(post.likes)
-        
-//        //PULL DATA FROM FIREBASE FOR PROFILE IMAGE
-//        if profileImage != nil
-//        {
-//            self.profileImg.image = profileImage
-//        }
-//        else
-//        {
-//            let picref = FIRStorage.storage().reference(forURL: post.profileImageURL)
-//            picref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
-//                if error != nil
-//                {
-//                    print("Unable to download profile image from firebase storage")
-//                }
-//                else
-//                {
-//                    print("Profile image downloaded from firebase storage")
-//                    if let imgData = data
-//                    {
-//                        if let img = UIImage(data: imgData)
-//                        {
-//                            self.profileImg.image = img
-//                            ForumsScreenVC.imageCache.setObject(img, forKey: post.profileImageURL as NSString)
-//                        }
-//                    }
-//                }
-//            })
-//        }
-//        //====================================================
         
         if image != nil
         {
@@ -125,4 +97,11 @@ class ForumsCell: UITableViewCell
             }
         })
     }
+    
+    @IBAction func deletePressed(_ sender: UIButton)
+    {
+        deleteRef = DataService.ds.REF_POSTS.child(post.postID)
+        deleteRef.removeValue()
+    }
+
 }

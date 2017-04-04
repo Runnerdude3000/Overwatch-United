@@ -9,35 +9,51 @@
 import UIKit
 import SwiftKeychainWrapper
 import Firebase
+import Alamofire
 
-class NewsScreenVC: UIViewController/*, UITableViewDelegate, UITableViewDataSource*/
+
+class NewsScreenVC: UIViewController
 {
     
     @IBOutlet weak var tableView: UITableView!
-    var videos = [OverwatchVid]()
+    var videos = [Video]()
+  //  var delegate: VideoModelDelegate?
     
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        grabVideos()
+        grabFeedVideos()
     }
     
-    func grabVideos()
+    func grabFeedVideos()
     {
-        let vid1 = OverwatchVid(imageURL: "https://img.youtube.com/vi/Q_FJwx_iYDk/hqdefault.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Q_FJwx_iYDk\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Developer Update | Introducing the Server Browser | Overwatch")
-        let vid2 = OverwatchVid(imageURL: "https://img.youtube.com/vi/SX2lJuk66xI/hqdefault.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/SX2lJuk66xI\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "[NEW SEASONAL EVENT] Welcome to the Year of the Rooster!")
-        let vid3 = OverwatchVid(imageURL: "https://img.youtube.com/vi/At7NWZ_mw6s/hqdefault.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/At7NWZ_mw6s\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Developer Update | Capture The Flag | Overwatch")
-        let vid4 = OverwatchVid(imageURL: "https://img.youtube.com/vi/ibPLyx8QWYc/hqdefault.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ibPLyx8QWYc\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Developer Update | PTR Philosophy | Overwatch")
-        let vid5 = OverwatchVid(imageURL: "https://img.youtube.com/vi/rhVZ-QIu4jk/hqdefault.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/rhVZ-QIu4jk\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "[NOW AVAILABLE] Oasis | New Map Preview | Overwatch")
-        
-        videos.append(vid1)
-        videos.append(vid2)
-        videos.append(vid3)
-        videos.append(vid4)
-        videos.append(vid5)
+        print("GRAB FEED VIDEOS ENTERED")
+        //Fetch videos dynamically through Youtube Data API
+        Alamofire.request("https://www.googleapis.com/youtube/v3/playlistItems", parameters: ["part" : "snippet", "maxResults" : 15 ,"playlistId" : YOUTUBE_PLAYLIST_ID, "key" : GOOGLE_API_KEY], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+            
+            if let JSON = response.result.value as? Dictionary<String, AnyObject>
+            {
+                if let items = JSON["items"] as? NSArray
+                {
+                    var videoInfo = [Video]()
+                    for video in items
+                    {
+                        let videoObj = Video()
+                        videoObj.videoID = (video as AnyObject).value(forKeyPath: "snippet.resourceId.videoId") as! String
+                        videoObj.videoTitle = (video as AnyObject).value(forKeyPath: "snippet.title") as! String
+                        videoObj.videoDescription = (video as AnyObject).value(forKeyPath: "snippet.description") as! String
+                        videoObj.videoThumbNailURL = (video as AnyObject).value(forKeyPath: "snippet.thumbnails.maxres.url") as! String
+                        videoInfo.append(videoObj)
+                    }
+                    self.videos = videoInfo
+                }
+            }
+        }
     }
+    
     
     @IBAction func logoutPressed(_ sender: UIButton)
     {
@@ -50,7 +66,7 @@ class NewsScreenVC: UIViewController/*, UITableViewDelegate, UITableViewDataSour
     {
         if let destination = segue.destination as? VideoVC
         {
-            if let video = sender as? OverwatchVid
+            if let video = sender as? Video
             {
                 destination.video = video
             }
@@ -71,7 +87,7 @@ extension NewsScreenVC: UITableViewDelegate, UITableViewDataSource
         }
         else
         {
-            return UITableViewCell()
+            return VideoCell()
         }
     }
     

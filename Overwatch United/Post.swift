@@ -24,20 +24,10 @@ class Post
         return _caption
     }
     
-//    var userName: String
-//    {
-//        return _userName
-//    }
-    
     var imageURL: String
     {
         return _imageURL
     }
-    
-//    var profileImageURL: String
-//    {
-//        return _profileImageURL
-//    }
     
     var likes: Int
     {

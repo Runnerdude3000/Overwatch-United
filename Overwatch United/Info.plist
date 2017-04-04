@@ -73,5 +73,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow us to access your photos to share with your friends!</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string></string>
 </dict>
 </plist>
