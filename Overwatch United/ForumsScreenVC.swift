@@ -53,6 +53,19 @@ class ForumsScreenVC: UIViewController
         })
     }
     
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        AppUtility.lockOrientation(.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        AppUtility.lockOrientation(.all)
+    }
+
+    
     @IBAction func backButtonPressed(_ sender: UIButton)
     {
         dismiss(animated: true, completion: nil)

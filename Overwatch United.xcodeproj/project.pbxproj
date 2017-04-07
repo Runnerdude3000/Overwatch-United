@@ -12,6 +12,7 @@
 		902065C61E746DFD000FAD0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902065C51E746DFD000FAD0E /* GoogleService-Info.plist */; };
 		9025FA151E54E8DE008C62E8 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025FA141E54E8DE008C62E8 /* VideoVC.swift */; };
 		9041D1CA1E54E34E00E5DE7C /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9041D1C91E54E34E00E5DE7C /* VideoCell.swift */; };
+		90442A841E97D30A00F06487 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90442A831E97D30A00F06487 /* AppUtility.swift */; };
 		908C87031E71AC89001B348A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87021E71AC89001B348A /* Hero.swift */; };
 		908C87061E71B0B8001B348A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87051E71B0B8001B348A /* Constants.swift */; };
 		908C870A1E71BEEA001B348A /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C87091E71BEEA001B348A /* HeroCell.swift */; };
@@ -42,6 +43,7 @@
 		90ED157E1E786338000FCC0D /* ForumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ED157D1E786338000FCC0D /* ForumsCell.swift */; };
 		90FB96691E72E81700C550EC /* overwatch.csv in Resources */ = {isa = PBXBuildFile; fileRef = 90FB96681E72E81700C550EC /* overwatch.csv */; };
 		90FB966B1E72E84500C550EC /* Csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB966A1E72E84500C550EC /* Csv.swift */; };
+		90FFF2371E9712DA00B9C18B /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFF2361E9712DA00B9C18B /* VideoModel.swift */; };
 		A327D15F0EB55EB4BD9E9C1E /* Pods_Overwatch_United.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB75B878F52778D92C1959E /* Pods_Overwatch_United.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,7 @@
 		902065C51E746DFD000FAD0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9025FA141E54E8DE008C62E8 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		9041D1C91E54E34E00E5DE7C /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		90442A831E97D30A00F06487 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		908C87021E71AC89001B348A /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		908C87051E71B0B8001B348A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		908C87091E71BEEA001B348A /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		90ED157D1E786338000FCC0D /* ForumsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumsCell.swift; sourceTree = "<group>"; };
 		90FB96681E72E81700C550EC /* overwatch.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = overwatch.csv; sourceTree = "<group>"; };
 		90FB966A1E72E84500C550EC /* Csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Csv.swift; sourceTree = "<group>"; };
+		90FFF2361E9712DA00B9C18B /* VideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		CDB75B878F52778D92C1959E /* Pods_Overwatch_United.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overwatch_United.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,6 +176,7 @@
 				908C87021E71AC89001B348A /* Hero.swift */,
 				90140DAF1E7DF8450045AAAA /* Post.swift */,
 				909D13DD1E93046100907399 /* Video.swift */,
+				90FFF2361E9712DA00B9C18B /* VideoModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				90B77F8F1E75BED600FE6CD9 /* View.swift */,
 				90ED157B1E78597F000FCC0D /* CircleImageView.swift */,
 				90ED157D1E786338000FCC0D /* ForumsCell.swift */,
+				90442A831E97D30A00F06487 /* AppUtility.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -482,9 +488,11 @@
 				90B697DA1E53D655008D0453 /* LoginScreenVC.swift in Sources */,
 				90B697E01E53D655008D0453 /* Overwatch_United.xcdatamodeld in Sources */,
 				90ED157C1E78597F000FCC0D /* CircleImageView.swift in Sources */,
+				90FFF2371E9712DA00B9C18B /* VideoModel.swift in Sources */,
 				90140DB01E7DF8450045AAAA /* Post.swift in Sources */,
 				908C87031E71AC89001B348A /* Hero.swift in Sources */,
 				90ED157A1E784DDE000FCC0D /* ForumsScreenVC.swift in Sources */,
+				90442A841E97D30A00F06487 /* AppUtility.swift in Sources */,
 				90B697D81E53D655008D0453 /* AppDelegate.swift in Sources */,
 				90C093741E885A92005C22D1 /* HeroDetailsVC.swift in Sources */,
 				90C093721E883B71005C22D1 /* HeroesScreenVC.swift in Sources */,

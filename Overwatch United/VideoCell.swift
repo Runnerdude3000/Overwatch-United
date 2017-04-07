@@ -10,10 +10,7 @@ import UIKit
 
 class VideoCell: UITableViewCell
 {
-    @IBOutlet weak var videoImage: UIImageView!
-    @IBOutlet weak var videoTitle: UILabel!
     
-
     override func awakeFromNib()
     {
         super.awakeFromNib()
@@ -28,8 +25,6 @@ class VideoCell: UITableViewCell
     //to update table cell upon refresh
     func updateCellUI(video: Video)
     {
-        videoTitle.text = video.videoTitle
-        
-        
+                
     }
 }

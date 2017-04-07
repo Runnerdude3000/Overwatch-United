@@ -11,50 +11,36 @@ import SwiftKeychainWrapper
 import Firebase
 import Alamofire
 
-
-class NewsScreenVC: UIViewController
+class NewsScreenVC: UIViewController, VideoModelDelegate
 {
-    
     @IBOutlet weak var tableView: UITableView!
     var videos = [Video]()
-  //  var delegate: VideoModelDelegate?
-    
+    var selectedVideo: Video?
+    let model = VideoModel()
 
     override func viewDidLoad()
     {
+        self.model.delegate = self
+        model.grabFeedVideos()
+        
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        grabFeedVideos()
+        
     }
     
-    func grabFeedVideos()
+    override func viewDidAppear(_ animated: Bool)
     {
-        print("GRAB FEED VIDEOS ENTERED")
-        //Fetch videos dynamically through Youtube Data API
-        Alamofire.request("https://www.googleapis.com/youtube/v3/playlistItems", parameters: ["part" : "snippet", "maxResults" : 15 ,"playlistId" : YOUTUBE_PLAYLIST_ID, "key" : GOOGLE_API_KEY], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-            
-            if let JSON = response.result.value as? Dictionary<String, AnyObject>
-            {
-                if let items = JSON["items"] as? NSArray
-                {
-                    var videoInfo = [Video]()
-                    for video in items
-                    {
-                        let videoObj = Video()
-                        videoObj.videoID = (video as AnyObject).value(forKeyPath: "snippet.resourceId.videoId") as! String
-                        videoObj.videoTitle = (video as AnyObject).value(forKeyPath: "snippet.title") as! String
-                        videoObj.videoDescription = (video as AnyObject).value(forKeyPath: "snippet.description") as! String
-                        videoObj.videoThumbNailURL = (video as AnyObject).value(forKeyPath: "snippet.thumbnails.maxres.url") as! String
-                        videoInfo.append(videoObj)
-                    }
-                    self.videos = videoInfo
-                }
-            }
-        }
+        super.viewDidAppear(animated)
+        AppUtility.lockOrientation(.portrait)
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        AppUtility.lockOrientation(.all)
+    }
+
     @IBAction func logoutPressed(_ sender: UIButton)
     {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
@@ -68,7 +54,7 @@ class NewsScreenVC: UIViewController
         {
             if let video = sender as? Video
             {
-                destination.video = video
+                destination.selectedVideo = video
             }
         }
     }
@@ -76,19 +62,50 @@ class NewsScreenVC: UIViewController
 
 extension NewsScreenVC: UITableViewDelegate, UITableViewDataSource
 {
+    func dataReady()
+    {
+        self.videos = self.model.videos
+        self.tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as? VideoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell")!
+        
+        let videoTitle = videos[indexPath.row].videoTitle
+        let label = cell.viewWithTag(2) as! UILabel
+        label.text = videoTitle
+        
+        //Construct video thumbnail url
+        let videoThumbnailURLString = videos[indexPath.row].videoThumbNailURL
+        
+        //Create an NSURL object
+        let videoThumbNailURL = URL(string: videoThumbnailURLString)
+        
+        if videoThumbNailURL != nil
         {
-            let video = videos[indexPath.row]
-            cell.updateCellUI(video: video)
+            //Create NSURLRequest object
+            let request = URLRequest(url: videoThumbNailURL!)
+            //Create NSURLSession
+            let session = URLSession.shared
+            //Create a data task and pass in the request
+            let dataTask = session.dataTask(with: request, completionHandler: { (data: Data?, resposne: URLResponse?, error: Error?) in
+                DispatchQueue.main.async
+                {
+                    
+                    //Get a refernce to the imageview element of the cell
+                    let imageView = cell.viewWithTag(1) as! UIImageView
+                    //Create an image object from the data and assign it into the image view
+                    imageView.image = UIImage(data: data!)
+                    
+                }
+                
+            })
+            dataTask.resume()
             
-            return cell
         }
-        else
-        {
-            return VideoCell()
-        }
+    
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -98,7 +115,7 @@ extension NewsScreenVC: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let video = videos[indexPath.row]
+        let video: Video = videos[indexPath.row]
         performSegue(withIdentifier: "VideoVC", sender: video)
     }
 }

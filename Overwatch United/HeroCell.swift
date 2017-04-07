@@ -19,7 +19,6 @@ class HeroCell: UICollectionViewCell
     
     func configureCell(_ hero: Hero)
     {
-        print("CONFIGURE CELL ENTERED")
         self.hero = hero
         cellLabel.text = self.hero.name.capitalized
         cellImage.image = UIImage(named: String(self.hero.heroID))

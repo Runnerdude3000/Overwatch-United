@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Video
+class Video: NSObject
 {
    private var _videoID: String!
    private var _videoTitle: String!

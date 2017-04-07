@@ -23,12 +23,22 @@ class LoginScreenVC: UIViewController
         super.viewDidLoad()
     }
     
+    
     override func viewDidAppear(_ animated: Bool)
     {
+        super.viewDidAppear(animated)
+        AppUtility.lockOrientation(.portrait)
+        
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID)
         {
             performSegue(withIdentifier: "LoginSegue", sender: nil)
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        AppUtility.lockOrientation(.all)
     }
 
     @IBAction func userNameEntered(_ sender: UITextField)
