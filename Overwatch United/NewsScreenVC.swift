@@ -92,19 +92,14 @@ extension NewsScreenVC: UITableViewDelegate, UITableViewDataSource
             let dataTask = session.dataTask(with: request, completionHandler: { (data: Data?, resposne: URLResponse?, error: Error?) in
                 DispatchQueue.main.async
                 {
-                    
                     //Get a refernce to the imageview element of the cell
                     let imageView = cell.viewWithTag(1) as! UIImageView
                     //Create an image object from the data and assign it into the image view
                     imageView.image = UIImage(data: data!)
-                    
                 }
-                
             })
             dataTask.resume()
-            
         }
-    
         return cell
     }
     

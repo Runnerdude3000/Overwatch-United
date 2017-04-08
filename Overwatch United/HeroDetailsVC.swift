@@ -60,5 +60,4 @@ class HeroDetailsVC: UIViewController
     {
         dismiss(animated: true, completion: nil)
     }
-
 }

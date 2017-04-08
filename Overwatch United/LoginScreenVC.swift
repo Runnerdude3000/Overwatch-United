@@ -17,6 +17,7 @@ class LoginScreenVC: UIViewController
 
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var errorField: UITextView!
     
     override func viewDidLoad()
     {
@@ -55,7 +56,6 @@ class LoginScreenVC: UIViewController
     {
         userNameField.resignFirstResponder()
         passwordField.resignFirstResponder()
-        
     }
     
     @IBAction func facebookButtonPressed(_ sender: UIButton)
@@ -120,17 +120,29 @@ class LoginScreenVC: UIViewController
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil
                         {
-                            print("ERROR: Unable to authenticate email with Firebase")
+                            if self.userNameField.text == "" && self.passwordField.text == ""
+                            {
+                                self.errorField.isHidden = false
+                                self.errorField.text = "ERROR: Must enter email and password!"
+                                print("ERROR: Unable to authenticate email with Firebase")
+                            }
+                            else
+                            {
+                                self.errorField.isHidden = false
+                                self.errorField.text = "ERROR: Incorrect username or password entered!"
+                                print("ERROR: Unable to authenticate email with Firebase")
+                            }
+                            
                         }
                         else
                         {
                             print("Email authentication successful")
                             if let user = user
                             {
+                                self.errorField.isHidden = true
                                 let userData = ["provider": user.providerID]
                                 self.completeSignIn(user.uid, userData)
                             }
-                            
                         }
                     })
                 }
